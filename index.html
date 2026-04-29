@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="meta-title">Solvata Beauty — Aparatūras kosmetoloģija Rīgā</title>
+<meta name="description" id="meta-desc" content="Profesionāla aparatūras kosmetoloģija Rīgā. Zionic, Endymed, Endospheres, Geneo, diodes lāzers. Individuāla pieeja katram klientam.">
+<meta name="keywords" content="aparatūras kosmetoloģija, Rīga, Endymed, Zionic, Endospheres, Geneo, lāzers, sejas kopšana, ķermeņa kopšana">
+<meta property="og:title" content="Solvata Beauty — Aparatūras kosmetoloģija">
+<meta property="og:description" content="Profesionāla aparatūras kosmetoloģija Rīgā ar oriģinālu premium aprīkojumu.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://solvatabeauty.lv">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Solvata Beauty",
+  "description": "Profesionāla aparatūras kosmetoloģija Rīgā",
+  "address": {"@type": "PostalAddress", "addressLocality": "Rīga", "addressCountry": "LV"},
+  "serviceType": ["Aparatūras kosmetoloģija", "Ķermeņa procedūras", "Sejas procedūras", "Lāzera epilācija"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --accent: #410022;
+    --accent-light: #6b0038;
+    --accent-pale: rgba(65,0,34,0.08);
+    --white: #ffffff;
+    --off-white: #faf8f7;
+    --text: #1a1015;
+    --text-muted: #7a6670;
+    --glass-bg: rgba(255,255,255,0.72);
+    --glass-border: rgba(255,255,255,0.5);
+    --glass-shadow: 0 8px 48px rgba(65,0,34,0.10);
+    --radius: 20px;
+    --transition: 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    background: var(--off-white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem;
+    background: rgba(250,248,247,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(65,0,34,0.08);
+    transition: var(--transition);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-logo-img {
+    width: 42px; height: 42px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .nav-logo-img img { width: 100%; height: 100%; object-fit: contain; }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .nav-logo span { font-style: italic; font-weight: 300; }
+  .nav-links {
+    display: flex; gap: 1.8rem; align-items: center;
+    flex-shrink: 1; min-width: 0;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-right {
+    display: flex; align-items: center; gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  .lang-switcher { display: flex; gap: 0.3rem; }
+  .lang-btn {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: none;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+    border-radius: 20px;
+    color: var(--text-muted);
+    transition: all 0.3s;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .lang-btn.active, .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background 0.3s !important;
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--accent-light) !important; color: white !important; }
+  .nav-services-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid rgba(65,0,34,0.25);
+    padding: 7px 16px;
+    border-radius: 30px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-services-link:hover { background: var(--accent-pale); }
+  @media (max-width: 1200px) {
+    .nav-links { gap: 1.2rem; }
+    .nav-links a { font-size: 0.7rem; }
+  }
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+  }
+  @media (max-width: 640px) {
+    .nav-services-link { display: none; }
+  }
+  @media (max-width: 480px) {
+    nav { padding: 12px 4vw; }
+    .nav-logo { font-size: 1.15rem; }
+    .nav-logo-img { width: 34px; height: 34px; }
+    .lang-btn { padding: 3px 6px; font-size: 0.62rem; }
+    .nav-cta { padding: 7px 14px; font-size: 0.68rem !important; }
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 140px 5vw 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, #fdf5f8 0%, #faf0f4 40%, #f5eaef 100%);
+  }
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+  .hero-orb-1 {
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(65,0,34,0.12) 0%, transparent 70%);
+    top: -20%; right: -10%;
+  }
+  .hero-orb-2 {
+    width: 40vw; height: 40vw;
+    background: radial-gradient(circle, rgba(65,0,34,0.07) 0%, transparent 70%);
+    bottom: -10%; left: -5%;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 680px;
+  }
+  .hero-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    opacity: 0; animation: fadeUp 1s 0.2s forwards;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 1s 0.4s forwards;
+  }
+  .hero-title em { font-style: italic; color: var(--accent); }
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    opacity: 0; animation: fadeUp 1s 0.6s forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp 1s 0.8s forwards;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+  .btn-ghost {
+    color: var(--accent);
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(65,0,34,0.3);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { background: var(--accent); color: white; }
+  .hero-visual {
+    position: absolute; right: 5vw; top: 50%;
+    transform: translateY(-50%);
+    width: min(42vw, 500px);
+    opacity: 0; animation: fadeIn 1.5s 0.6s forwards;
+  }
+  .hero-visual-video {
+    width: 100%; height: 70vh;
+    border-radius: 200px 200px 160px 160px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 24px 80px rgba(65,0,34,0.18);
+  }
+  .hero-visual-video video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .hero-floating-card {
+    position: absolute;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: var(--glass-shadow);
+  }
+  .hero-card-1 { left: -60px; bottom: 15%; animation: float 6s ease-in-out infinite; }
+  .hero-card-2 { right: -20px; top: 20%; animation: float 6s ease-in-out 3s infinite; }
+  .hero-card-3 { left: -40px; top: 22%; animation: float 6s ease-in-out 1.5s infinite; }
+  .hero-card-stat { font-size: 1.6rem; font-weight: 500; color: var(--accent); line-height: 1; }
+  .hero-card-label { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.08em; margin-top: 2px; }
+
+  /* SECTIONS */
+  section { padding: 100px 5vw; position: relative; }
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .section-title em { font-style: italic; color: var(--accent); }
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  /* MISSION */
+  #mission {
+    background: linear-gradient(180deg, var(--off-white) 0%, #f8f2f5 100%);
+  }
+  .mission-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    align-items: center;
+  }
+  .mission-text {}
+  .mission-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text);
+    border-left: 2px solid var(--accent);
+    padding-left: 2rem;
+    margin: 2rem 0;
+  }
+  .mission-badges {
+    display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem;
+  }
+  .badge {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    box-shadow: 0 2px 12px rgba(65,0,34,0.08);
+  }
+  .mission-visual {
+    position: relative;
+    height: 580px;
+  }
+  .mission-img-frame {
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, rgba(65,0,34,0.06) 0%, rgba(65,0,34,0.12) 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+  }
+  .placeholder-img {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(65,0,34,0.25);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    flex-direction: column; gap: 8px;
+  }
+  .placeholder-img svg { opacity: 0.3; }
+
+  /* EQUIPMENT */
+  #equipment {
+    background: var(--off-white);
+  }
+  .equipment-header { text-align: center; max-width: 700px; margin: 0 auto 5rem; }
+  .equipment-header .section-sub { margin: 0 auto; }
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  .equip-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--glass-shadow);
+    transition: transform var(--transition), box-shadow var(--transition), opacity 0.6s ease;
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+  }
+  .equip-card.animate-hidden { opacity: 0; transform: translateY(30px); }
+  .equip-card.animate-hidden.visible { opacity: 1; transform: translateY(0); }
+  .equip-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(65,0,34,0.14); }
+  .equip-img {
+    height: 220px;
+    background: linear-gradient(160deg, rgba(65,0,34,0.05) 0%, rgba(65,0,34,0.12) 100%);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .equip-img .placeholder-img { font-size: 0.75rem; }
+  .equip-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .equip-body-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .equip-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  .equip-desc {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+  .equip-effects {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .effect-tag {
+    background: var(--accent-pale);
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .equip-extra {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(65,0,34,0.08);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .cert-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(65,0,34,0.06);
+    color: var(--accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+
+  /* ENDOSPHERES special */
+  .equip-card.featured {
+    grid-column: span 2;
+  }
+  .equip-card.featured .equip-img { height: 280px; }
+  .equip-card.featured .equip-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+  }
+  .equip-card.featured .equip-name { grid-column: 1/-1; }
+  @media (max-width: 768px) {
+    .equip-card.featured { grid-column: span 1; }
+    .equip-card.featured .equip-body { grid-template-columns: 1fr; }
+  }
+
+  /* WHY US */
+  #why {
+    background: linear-gradient(180deg, #f8f2f5 0%, var(--off-white) 100%);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+  .why-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--glass-shadow);
+    transition: transform var(--transition), opacity 0.6s ease;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .why-card.animate-hidden { opacity: 0; transform: translateY(20px); }
+  .why-card.animate-hidden.visible { opacity: 1; transform: translateY(0); }
+  .why-card:hover { transform: translateY(-4px); }
+  .why-icon {
+    width: 44px; height: 44px;
+    background: var(--accent-pale);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    font-size: 1.2rem;
+  }
+  .why-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .why-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* BEFORE/AFTER */
+  #beforeafter {
+    background: var(--off-white);
+  }
+  .ba-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  .ba-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--glass-shadow);
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .ba-card.animate-hidden { opacity: 0; transform: scale(0.96); }
+  .ba-card.animate-hidden.visible { opacity: 1; transform: scale(1); }  .ba-images {
+    display: grid; grid-template-columns: 1fr 1fr;
+    height: 280px;
+  }
+  .ba-half {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .ba-half.before {
+    background: linear-gradient(160deg, #e8d8de 0%, #d5c0c8 100%);
+  }
+  .ba-half.after {
+    background: linear-gradient(160deg, #f5eaf0 0%, #ecdadf 100%);
+  }
+  .ba-label-small {
+    position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+    font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: white; background: rgba(65,0,34,0.5); padding: 3px 10px; border-radius: 10px;
+  }
+  .ba-info {
+    padding: 18px 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-top: none;
+  }
+  .ba-procedure {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 500;
+    color: var(--text);
+  }
+  .ba-sessions { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+
+  /* VIDEO */
+  #video-section {
+    background: linear-gradient(180deg, #f8f2f5 0%, var(--off-white) 100%);
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+  .video-frame {
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    background: #1a0010;
+    position: relative;
+    box-shadow: var(--glass-shadow);
+  }
+  .video-label-overlay {
+    position: absolute;
+    bottom: 16px; left: 50%; transform: translateX(-50%);
+    background: rgba(65,0,34,0.7);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    white-space: nowrap;
+  }
+
+  /* REVIEWS */
+  #reviews {
+    background: var(--off-white);
+    overflow: hidden;
+  }
+  .reviews-track {
+    display: flex; gap: 1.5rem;
+    margin-top: 4rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .reviews-track::-webkit-scrollbar { display: none; }
+  .review-card {
+    flex: 0 0 320px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--glass-shadow);
+  }
+  .review-stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem; letter-spacing: 2px; }
+  .review-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+  }
+  .reviewer { display: flex; align-items: center; gap: 12px; }
+  .reviewer-proc {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.7;
+    margin-top: 1rem;
+  }
+
+  /* BOOKING SECTION - full redesign */
+  #booking {
+    background: var(--off-white);
+    padding: 100px 5vw;
+  }
+  .booking-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .booking-left {}
+  .booking-left .section-label { color: var(--accent); }
+  .booking-left .section-title { margin-bottom: 0.5rem; }
+
+  /* Form fields */
+  .form-group {
+    display: flex; flex-direction: column; gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  .form-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-family: 'Jost', sans-serif;
+  }
+  .form-input, .form-select {
+    background: white;
+    border: 1px solid rgba(65,0,34,0.15);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-input:focus, .form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(65,0,34,0.06);
+  }
+  .form-input::placeholder { color: rgba(65,0,34,0.3); }
+  .form-select-wrap {
+    position: relative;
+  }
+  .form-select-wrap::after {
+    content: '';
+    position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--accent);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  }
+  .form-submit {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 36px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--accent-light); transform: translateY(-2px); }
+  .form-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    text-align: center;
+    opacity: 0.7;
+  }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: var(--accent);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+
+  /* Alteg block */
+  .booking-right {}
+  .alteg-block {
+    background: white;
+    border: 1px solid rgba(65,0,34,0.1);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--glass-shadow);
+  }
+  .alteg-header {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    padding: 24px 28px;
+    color: white;
+  }
+  .alteg-header-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 6px;
+  }
+  .alteg-header-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .alteg-body {
+    padding: 28px;
+  }
+  .alteg-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  /* Placeholder for Alteg iframe */
+  .alteg-placeholder {
+    background: linear-gradient(160deg, rgba(65,0,34,0.03) 0%, rgba(65,0,34,0.07) 100%);
+    border: 2px dashed rgba(65,0,34,0.15);
+    border-radius: 12px;
+    min-height: 320px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px;
+    color: rgba(65,0,34,0.3);
+    text-align: center;
+    padding: 2rem;
+  }
+  .alteg-placeholder-icon {
+    width: 52px; height: 52px;
+    background: rgba(65,0,34,0.06);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    opacity: 0.5;
+    margin-bottom: 4px;
+  }
+  .alteg-placeholder-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: rgba(65,0,34,0.5);
+  }
+  .alteg-placeholder-sub {
+    font-size: 0.75rem;
+    color: rgba(65,0,34,0.3);
+    letter-spacing: 0.06em;
+    font-family: 'Jost', sans-serif;
+    line-height: 1.6;
+  }
+  /* When Alteg script is integrated, replace .alteg-placeholder with the widget */
+  /* #alteg-widget { min-height: 500px; } */
+
+  @media (max-width: 900px) {
+    .booking-inner { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* TEAM SECTION */
+  #team {
+    background: linear-gradient(180deg, var(--off-white) 0%, #f8f2f5 100%);
+    padding: 100px 5vw;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  .team-card {
+    text-align: center;
+    opacity: 1; transform: translateY(0);
+    transition: transform 0.4s ease;
+  }
+  .team-card:hover { transform: translateY(-6px); }
+  .team-avatar {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.25rem;
+    border: 3px solid white;
+    box-shadow: 0 8px 32px rgba(65,0,34,0.12);
+    position: relative;
+    background: linear-gradient(160deg, #f0e0e8 0%, #e0c8d4 100%);
+  }
+  .team-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center top;
+    display: block;
+  }
+  .team-avatar-placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: rgba(65,0,34,0.25);
+  }
+  .team-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+  }
+  .team-role {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.75;
+    margin-bottom: 0.85rem;
+  }
+  .team-quote {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+  }
+  @media (max-width: 900px) {
+    .team-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .team-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .team-avatar { width: 110px; height: 110px; }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.6);
+    padding: 60px 5vw 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+  .footer-brand .nav-logo { color: rgba(255,255,255,0.9); display: inline-block; margin-bottom: 1rem; }
+  .footer-desc { font-size: 0.85rem; line-height: 1.7; color: rgba(255,255,255,0.45); }
+  .footer-col h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1rem;
+    letter-spacing: 0.06em;
+  }
+  .footer-col a {
+    display: block;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    font-size: 0.82rem;
+    line-height: 2;
+    transition: color 0.3s;
+
+  }
+  .footer-col a:hover { color: rgba(255,255,255,0.8); }
+  .footer-bottom {
+    background: var(--text);
+    padding: 20px 5vw;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes fadeRight {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes lineGrow {
+    from { width: 0; opacity: 0; }
+    to { width: 48px; opacity: 0.4; }
+  }
+
+  /* Animated section-divider */
+  .section-divider {
+    width: 0; height: 1px;
+    background: var(--accent);
+    margin: 1.5rem 0;
+    opacity: 0;
+    transition: width 0.8s ease, opacity 0.6s ease;
+  }
+  .section-divider.visible-line { width: 48px; opacity: 0.4; }
+
+  /* SCROLL REVEAL base */
+  .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.animate-hidden { opacity: 0; transform: translateY(28px); }
+  .reveal.animate-hidden.visible { opacity: 1; transform: translateY(0); }
+
+  /* Directional variants */
+  .reveal-left.animate-hidden { opacity: 0; transform: translateX(-28px); }
+  .reveal-left.animate-hidden.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right.animate-hidden { opacity: 0; transform: translateX(28px); }
+  .reveal-right.animate-hidden.visible { opacity: 1; transform: translateX(0); }
+  .reveal-scale.animate-hidden { opacity: 0; transform: scale(0.94); }
+  .reveal-scale.animate-hidden.visible { opacity: 1; transform: scale(1); }
+
+  /* Section label animated underline */
+  .section-label {
+    position: relative;
+    display: inline-block;
+  }
+  .section-label::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--accent);
+    transition: width 0.6s ease 0.3s;
+    opacity: 0.5;
+  }
+  .visible-label .section-label::after,
+  section.in-view .section-label::after { width: 100%; }
+
+  /* Smooth number counter animation for hero stats */
+  .hero-card-stat {
+    background: linear-gradient(90deg, var(--accent), var(--accent-light), var(--accent));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* RESPONSIVE */
+  /* PRICE BUTTON & MODAL */
+  .price-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: white; border: none;
+    border-radius: 30px; padding: 7px 16px;
+    font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 400;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; flex-shrink: 0;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .price-btn:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .first-session-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: white; border-radius: 20px;
+    padding: 6px 14px; font-size: 0.78rem; letter-spacing: 0.06em;
+    font-weight: 400; margin-top: 0.75rem;
+  }
+  .price-modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(26,16,21,0.6); backdrop-filter: blur(8px);
+    z-index: 500; align-items: center; justify-content: center; padding: 20px;
+  }
+  .price-modal-overlay.open { display: flex; }
+  .price-modal {
+    background: var(--off-white); border-radius: 24px;
+    max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto;
+    padding: 40px; position: relative;
+    box-shadow: 0 32px 80px rgba(65,0,34,0.25);
+    animation: scaleIn 0.3s ease;
+  }
+  @keyframes scaleIn { from { opacity:0; transform:scale(0.94); } to { opacity:1; transform:scale(1); } }
+  .price-modal-close {
+    position: absolute; top: 16px; right: 16px;
+    width: 32px; height: 32px; background: var(--accent-pale);
+    border: none; border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; color: var(--accent); transition: background 0.2s;
+  }
+  .price-modal-close:hover { background: rgba(65,0,34,0.15); }
+  .price-modal-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.6rem;
+    font-weight: 500; color: var(--accent); margin-bottom: 0.25rem;
+  }
+  .price-modal-subtitle {
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 1.5rem;
+  }
+  .price-group { margin-bottom: 1.5rem; }
+  .price-group-title {
+    font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--accent); opacity: 0.6; margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem; border-bottom: 1px solid rgba(65,0,34,0.1);
+  }
+  .price-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 7px 0; border-bottom: 1px solid rgba(65,0,34,0.05);
+    font-size: 0.875rem; color: var(--text); gap: 1rem;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row-name { flex: 1; line-height: 1.5; }
+  .price-row-price { font-weight: 500; color: var(--accent); white-space: nowrap; }
+  .price-highlight {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: white; border-radius: 10px; padding: 10px 14px;
+    margin-bottom: 1rem; display: flex; justify-content: space-between;
+    font-size: 0.9rem; font-weight: 400;
+  }
+  .price-highlight .price-row-price { color: white; }
+
+  /* BA CAROUSEL */
+  .ba-carousel-wrap {
+    margin-top: 4rem; position: relative; overflow: hidden;
+  }
+  .ba-carousel-wrap::before, .ba-carousel-wrap::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2;
+    pointer-events: none;
+  }
+  .ba-carousel-wrap::before { left: 0; background: linear-gradient(to right, var(--off-white), transparent); }
+  .ba-carousel-wrap::after { right: 0; background: linear-gradient(to left, var(--off-white), transparent); }
+  .ba-carousel-track {
+    display: flex; gap: 1.5rem;
+    width: max-content;
+    animation: baScroll 80s linear infinite;
+  }
+  .ba-carousel-track:hover { animation-play-state: paused; }
+  @keyframes baScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 7 - 1.5rem * 7)); }
+  }
+  .ba-pair {
+    flex: 0 0 300px; border-radius: var(--radius);
+    overflow: hidden; box-shadow: var(--glass-shadow);
+  }
+  .ba-pair-images { display: grid; grid-template-columns: 1fr 1fr; height: 260px; }
+  .ba-pair-half { position: relative; overflow: hidden; }
+  .ba-pair-half img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center top; display: block;
+  }
+  .ba-pair-label {
+    position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%);
+    font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: white; background: rgba(65,0,34,0.55);
+    padding: 2px 8px; border-radius: 8px; white-space: nowrap;
+  }
+
+  @media (max-width: 1024px) {
+    .mission-inner { grid-template-columns: 1fr; }
+    .mission-visual { height: 360px; }
+    .hero-visual { display: none; }
+    .video-grid { grid-template-columns: 1fr 1fr; }
+    footer { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    section { padding: 70px 5vw; }
+    .video-grid { grid-template-columns: 1fr; max-width: 300px; margin-left: auto; margin-right: auto; }
+    footer { grid-template-columns: 1fr; gap: 2rem; padding: 40px 5vw 30px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .booking-inner { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .equipment-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .ba-pair { flex: 0 0 260px; }
+    .ba-pair-images { height: 210px; }
+  }
+  @media (max-width: 560px) {
+    .why-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+    .hero-subtitle { font-size: 0.95rem; }
+    .btn-primary, .btn-ghost { padding: 12px 24px; font-size: 0.78rem; }
+    .mission-visual { height: 280px; }
+    .section-title { font-size: clamp(1.7rem, 7vw, 2.5rem); }
+    .price-modal { padding: 24px 16px; }
+    .ba-pair { flex: 0 0 240px; }
+    .ba-pair-images { height: 190px; }
+    .team-grid { grid-template-columns: 1fr !important; max-width: 320px !important; }
+    .video-grid { max-width: 280px; }
+    .hero-floating-card { display: none; }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.animate-hidden { opacity: 0; transform: translateY(28px); }
+  .reveal.animate-hidden.visible { opacity: 1; transform: translateY(0); }
+
+  /* DIVIDER */
+  .section-divider {
+    width: 48px; height: 1px;
+    background: var(--accent);
+    margin: 1.5rem 0;
+    opacity: 0.4;
+  }
+</style>
+</head>
+<body>
+
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-logo-img">
+      <img src="https://ik.imagekit.io/erewhile/Solvata/logo%20solvata%20beauty.png?updatedAt=1777383555772" alt="Solvata Beauty">
+    </div>
+    <span class="nav-logo">Solvata <span>Beauty</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="#mission" data-i18n="nav_mission">Misija</a>
+    <a href="#equipment" data-i18n="nav_equipment">Aprīkojums</a>
+    <a href="#why" data-i18n="nav_why">Par mums</a>
+    <a href="#team" data-i18n="nav_team">Komanda</a>
+    <a href="#reviews" data-i18n="nav_reviews">Atsauksmes</a>
+    <a href="#booking" class="nav-cta" data-i18n="nav_book">Pierakstīties</a>
+  </div>
+  <div class="nav-right">
+    <a href="#equipment" class="nav-services-link" data-i18n="nav_services">Pakalpojumi</a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('lv')">LV</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <span class="hero-label" data-i18n="hero_label">Aparatūras kosmetoloģija · Rīga</span>
+    <h1 class="hero-title" data-i18n="hero_title">Dabiskais <em>skaistums</em><br>un jaunība</h1>
+    <p class="hero-subtitle" data-i18n="hero_subtitle">Caur aparatūras kosmetoloģijas iespējām ar rūpību atbalstām sejas un ķermeņa ādas veselību, maigi pagarinot jaunību un palīdzot sievietei justies pārliecināta par sevi.</p>
+    <div class="hero-actions">
+      <a href="#booking" class="btn-primary" data-i18n="hero_cta">Pierakstīties uz procedūru</a>
+      <a href="#equipment" class="btn-ghost" data-i18n="hero_cta2">Mūsu tehnoloģijas</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-visual-video">
+      <video autoplay muted loop playsinline>
+        <source src="https://ik.imagekit.io/erewhile/Solvata/solvata%20main%20vid.mov/ik-video.mp4?updatedAt=1777384005851" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-floating-card hero-card-1">
+      <div class="hero-card-stat">6+</div>
+      <div class="hero-card-label" data-i18n="hero_stat1">Premium iekārtas</div>
+    </div>
+    <div class="hero-floating-card hero-card-2">
+      <div class="hero-card-stat">5+</div>
+      <div class="hero-card-label" data-i18n="hero_stat2">Gadu pieredze</div>
+    </div>
+    <div class="hero-floating-card hero-card-3">
+      <div class="hero-card-stat" style="font-size:1.1rem;">35€</div>
+      <div class="hero-card-label" data-i18n="hero_stat3">Endospheres 1. seanss</div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="mission-inner">
+    <div class="mission-text reveal-left">
+      <span class="section-label" data-i18n="mission_label">Mūsu misija</span>
+      <h2 class="section-title" data-i18n="mission_title">Ādas <em>veselība</em><br>ir mūsu prioritāte</h2>
+      <div class="section-divider"></div>
+      <blockquote class="mission-quote" data-i18n="mission_quote">
+        Caur aparatūras kosmetoloģijas iespējām ar rūpību atbalstām sejas un ķermeņa ādas veselību, maigi pagarinot jaunību.
+      </blockquote>
+      <p class="section-sub" data-i18n="mission_text">
+        Mēs strādājam tikai ar oriģinālām, premium iekārtām, kas izgājušas klīniskos pētījumus, kurām ir pierādījumu bāze un apstiprinoši sertifikāti.
+      </p>
+      <div class="mission-badges">
+        <span class="badge" data-i18n="badge_certified">Klīniski pārbaudīts</span>
+        <span class="badge" data-i18n="badge_original">Oriģināls aprīkojums</span>
+        <span class="badge" data-i18n="badge_individual">Individuāla pieeja</span>
+        <span class="badge" data-i18n="badge_medical">Medicīniskā izglītība</span>
+      </div>
+    </div>
+    <div class="mission-visual reveal-right">
+      <div class="mission-img-frame">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/main%20photo.png" alt="Solvata Beauty" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section id="equipment">
+  <div class="equipment-header reveal">
+    <span class="section-label" data-i18n="equip_label">Mūsu aprīkojums</span>
+    <h2 class="section-title" data-i18n="equip_title">Tehnoloģijas un <em>iekārtas</em></h2>
+    <p class="section-sub" data-i18n="equip_sub">Premium klases aparatūra ar klīniski pierādītu efektivitāti — izvēlēta ar augstu atbildību par katras klientēs drošumu un rezultātu.</p>
+    <a href="/services" class="btn-primary" style="display:inline-block; margin-top:2rem; font-size:0.78rem;" data-i18n="equip_subpage_btn">Visi pakalpojumi un detalizēts apraksts →</a>
+  </div>
+
+  <div class="equipment-grid">
+
+    <!-- Zionic -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/zionic_%20fotos_81.jpg" alt="Zionic" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">Zionic</div>
+        <p class="equip-desc" data-i18n="zionic_desc">Unikāla kombinācija: dziļš rotācijas masāžs + rezistīvā radiofrekvence vienā procedūrā. Audu probiešana notiek dziļāk, un efekts — uzvilkta, gluda āda — parādās jau pirmajās seansēs. Procedūra jūtama kā silts masāžs.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="zionic_e1">Celulīta mazināšana</span>
+          <span class="effect-tag" data-i18n="zionic_e2">Ādas nostiprināšana</span>
+          <span class="effect-tag" data-i18n="zionic_e3">Ķermeņa kontūras</span>
+          <span class="effect-tag" data-i18n="zionic_e4">Limfodrenāža</span>
+          <span class="effect-tag" data-i18n="zionic_e5">Ātrāk redzams efekts</span>
+          <span class="effect-tag" data-i18n="zionic_e6">Ādas kvalitāte</span>
+        </div>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-zionic")' data-i18n="price_btn_zionic">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Endymed Microneedling -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/Endymed%20Intensive%20Microneedling.png" alt="Endymed Intensive Microneedling" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">Endymed Intensive Microneedling</div>
+        <p class="equip-desc" data-i18n="endymed_mn_desc">Procedūra atjauno ādu no iekšpuses — aktivizē jauna kolagēna un elastīna veidošanos. Āda kļūst blīvāka, gludāka un jaunīgāka bez ķirurģijas. Efekts pieaug 2–3 mēnešu laikā.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="endymed_e1">Liftings un savilkšana</span>
+          <span class="effect-tag" data-i18n="endymed_e2">Rētas un strijas</span>
+          <span class="effect-tag" data-i18n="endymed_e3">Pēcaknes ārstēšana</span>
+          <span class="effect-tag" data-i18n="endymed_e4">Pigmentācija</span>
+        </div>
+        <div class="equip-extra" data-i18n="endymed_mn_extra">Rehabilitācija: 3–7 dienas · 2–3 procedūras · Efekts līdz 2 gadiem</div>
+        <span class="cert-badge">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M6 0l1.5 4.5H12L8.25 7.25 9.75 12 6 9.25 2.25 12l1.5-4.75L0 4.5h4.5L6 0z"/></svg>
+          FDA Sertifikāts
+        </span>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-endymed-mn")' data-i18n="price_btn_endymed">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Endymed FSR -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/endymed%20fsr.png" alt="Endymed FSR" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">Endymed FSR</div>
+        <p class="equip-desc" data-i18n="endymed_fsr_desc">Viegla ādas slīpēšana un RF liftings vienlaicīgi — āda kļūst spožāka, vienādāka un blīvāka. Īsāks rehabilitācijas periods nekā lāzera procedūrām. Ideāli piemērots pēcaknes korekcijai un ādas toni izlīdzināšanai.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="fsr_e1">Pigmentācija</span>
+          <span class="effect-tag" data-i18n="fsr_e2">Paplašinātas poras</span>
+          <span class="effect-tag" data-i18n="fsr_e3">Pēcaknes rētas</span>
+          <span class="effect-tag" data-i18n="fsr_e4">Grumbas</span>
+          <span class="effect-tag" data-i18n="fsr_e5">Dubultais zods</span>
+          <span class="effect-tag" data-i18n="fsr_e6">Ādas spīdums</span>
+        </div>
+        <div class="equip-extra" data-i18n="fsr_extra">Tūlītējs rezultāts · Īss rehabilitācijas periods · Bez blakusparādībām</div>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-endymed-fsr")' data-i18n="price_btn_fsr">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENDYEye -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/endy%20eye.png" alt="ENDYEye" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">ENDYEye — Eyes Lifting</div>
+        <p class="equip-desc" data-i18n="endyeye_desc">Bezoperācijas alternatīva blefaroplastikai. Trīs Endymed tehnoloģijas vienā protokolā ievelk plakstiņa ādu, mazina pietūkumu un izlīdzina "zosu pēdas" — bez iejaukšanās un atveseļošanās perioda.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="endyeye_e1">Plakstiņu liftings</span>
+          <span class="effect-tag" data-i18n="endyeye_e2">Pietūkums zem acīm</span>
+          <span class="effect-tag" data-i18n="endyeye_e3">"Zosu pēdas"</span>
+          <span class="effect-tag" data-i18n="endyeye_e4">Ādas blīvums</span>
+        </div>
+        <div class="equip-extra" data-i18n="endyeye_extra">RF liftings · RF mikronīdlings · Frakcionāla atjaunošana</div>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-endyeye")' data-i18n="price_btn_endyeye">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Endospheres -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/endospheres.png" alt="Endospheres" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">Endospheres</div>
+        <p class="equip-desc" data-i18n="endo_desc">Kompresijas mikrovibrācijas tehnoloģija, kas izstrādāta kopā ar flebologu. Iedarbojas ne tikai uz ādu, bet uzlabo cirkulāciju audos — mazina tūsku, nogurumu kājās un nostiprina ādas struktūru. Darbojas arī sejai: ovāla liftings, ādas tonis un svaigāks izskats.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="endo_e1">Tūskas mazināšana</span>
+          <span class="effect-tag" data-i18n="endo_e2">Limfas drenāža</span>
+          <span class="effect-tag" data-i18n="endo_e3">Gludāka āda</span>
+          <span class="effect-tag" data-i18n="endo_e4">Celulīts</span>
+          <span class="effect-tag" data-i18n="endo_e5">Mikrocirkulācija</span>
+          <span class="effect-tag" data-i18n="endo_f4">Sejas ovāls</span>
+          <span class="effect-tag" data-i18n="endo_f3">Ādas tonis</span>
+        </div>
+        <span class="first-session-badge">✦ <span data-i18n="endo_first_session">1. seanss — 35€</span></span>
+        <p class="equip-extra" data-i18n="endo_course">Bez atveseļošanās perioda · Rezultāts redzams pēc 1. procedūras · Kurss: 6–12 procedūras</p>
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-endospheres")' data-i18n="price_btn_endospheres">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pollogen Geneo -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/pollogen%20geneo.JPG" alt="Pollogen Geneo" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">Pollogen Geneo</div>
+        <p class="equip-desc" data-i18n="geneo_desc">3-in-1 procedūra, kas vienlaicīgi tīra, piesātina ādu ar skābekli un stimulē kolagēna veidošanos. Redzams rezultāts jau pēc pirmās reizes — spīdums, svaigums un uzvilkta āda bez agresīvas iedarbības.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="geneo_e1">OxyGeneo skābekļa terapija</span>
+          <span class="effect-tag" data-i18n="geneo_e2">RF liftings</span>
+          <span class="effect-tag" data-i18n="geneo_e3">Ultraskaņa</span>
+          <span class="effect-tag" data-i18n="geneo_e4">Glow efekts</span>
+          <span class="effect-tag" data-i18n="geneo_e5">Pigmentācija un akne</span>
+        </div>
+        <div class="equip-extra" data-i18n="geneo_extra">Kapsulas pēc izvēles: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome</div>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-geneo")' data-i18n="price_btn_geneo">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TriPollar RF -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/TriPollar%20RF.jpg" alt="TriPollar RF" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">TriPollar RF</div>
+        <p class="equip-desc" data-i18n="tripollar_desc">Klasiskais RF liftings — maigs, bez ādas bojājumiem. Uzsilda audus, stimulē kolagēnu un nodrošina redzamu mīksto audu savilkšanu jau pēc pirmās procedūras. Lielisks kā regulāra kopšanas procedūra.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="tripollar_e1">Ādas savilkšana</span>
+          <span class="effect-tag" data-i18n="tripollar_e2">Grumbas</span>
+          <span class="effect-tag" data-i18n="tripollar_e3">Sejas ovāls</span>
+          <span class="effect-tag" data-i18n="tripollar_e4">Viegls lipolīzs</span>
+          <span class="effect-tag" data-i18n="tripollar_e5">Ādas tonuss</span>
+        </div>
+        <div class="equip-extra" data-i18n="tripollar_extra">Efekts pēc 1. procedūras · Kurss — ilglaicīgs rezultāts · Piemērots regulārai kopšanai</div>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-tripollar")' data-i18n="price_btn_tripollar">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laser -->
+    <div class="equip-card">
+      <div class="equip-img" style="background:none">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/laser.png" alt="Diodes lāzers Lamis XL" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="equip-body">
+        <div class="equip-name">Diodes lāzers Lamis XL</div>
+        <p class="equip-desc" data-i18n="laser_desc">Mūsdienīgs diodes lāzers ilglaicīgai epilācijai. Ar dzesēšanas sistēmu — ērti un droši visiem ādas tipiem. Mati kļūst retāki jau pēc pirmajiem seansiem, āda paliek gluda uz ilgu laiku.</p>
+        <div class="equip-effects">
+          <span class="effect-tag" data-i18n="laser_e1">Ilglaicīga epilācija</span>
+          <span class="effect-tag" data-i18n="laser_e2">Gluda āda</span>
+          <span class="effect-tag" data-i18n="laser_e3">Visi ādas tipi</span>
+          <span class="effect-tag" data-i18n="laser_e4">Mazāks diskomforts</span>
+        </div>
+        <div class="equip-extra" data-i18n="laser_extra">Kurss: 6–12 procedūras · Sejai un ķermenim</div>
+      
+        <div class="equip-body-footer">
+          <button class="price-btn" onclick='openModal("modal-laser")' data-i18n="price_btn_laser">Cenas</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</sectio
+</section>
+
+
+<!-- WHY US -->
+<section id="why">
+  <div class="reveal" style="max-width:600px">
+    <span class="section-label" data-i18n="why_label">Mūsu priekšrocības</span>
+    <h2 class="section-title" data-i18n="why_title">Kāpēc <em>izvēlēties</em> mūs</h2>
+    <p class="section-sub" data-i18n="why_sub">Mēs ne tikai veicam procedūras, bet veidojam kopšanas un rezultātu sistēmu katrai klientei.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">✦</div>
+      <div class="why-title" data-i18n="why1_title">Individuāla pieeja</div>
+      <p class="why-desc" data-i18n="why1_desc">Katra procedūra tiek izvēlēta personīgi katrai klientei.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">◈</div>
+      <div class="why-title" data-i18n="why2_title">Mūsdienīgs aprīkojums</div>
+      <p class="why-desc" data-i18n="why2_desc">Izmantojam pēdējās paaudzes tehnoloģijas ar klīniski pierādītu efektivitāti.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⬡</div>
+      <div class="why-title" data-i18n="why3_title">Kompleksi risinājumi</div>
+      <p class="why-desc" data-i18n="why3_desc">Kombinējam procedūras labākajam rezultātam.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">✿</div>
+      <div class="why-title" data-i18n="why4_title">Pieredze un kvalifikācija</div>
+      <p class="why-desc" data-i18n="why4_desc">Speciālisti ar medicīnisko izglītību un vairāk nekā 5 gadu pieredzi.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">◎</div>
+      <div class="why-title" data-i18n="why5_title">Godīga pieeja</div>
+      <p class="why-desc" data-i18n="why5_desc">Bez nevajadzīgu procedūru uzspiešanas.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">❋</div>
+      <div class="why-title" data-i18n="why6_title">Komforts un serviss</div>
+      <p class="why-desc" data-i18n="why6_desc">Radām komfortablu atmosfēru katrai klientei.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="beforeafter">
+  <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto">
+    <span class="section-label" data-i18n="ba_label">Rezultāti</span>
+    <h2 class="section-title" data-i18n="ba_title">Pirms un <em>pēc</em></h2>
+    <p class="section-sub" style="margin:0 auto" data-i18n="ba_sub">Reāli rezultāti mūsu klientēm.</p>
+  </div>
+  <div class="ba-carousel-wrap">
+    <div class="ba-carousel-track">
+      <!-- Set 1 (originals) -->
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/1.png?updatedAt=1777495796029" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/2.png?updatedAt=1777495796365" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/3.png?updatedAt=1777495796040" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/4.png?updatedAt=1777495796252" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/5.png?updatedAt=1777495796180" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/6.png?updatedAt=1777495796162" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/7.png?updatedAt=1777495796262" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/8.png?updatedAt=1777495796264" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/9.png?updatedAt=1777495796339" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/10.png?updatedAt=1777495796399" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/11.png?updatedAt=1777495796330" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/12.png?updatedAt=1777495796301" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/13.png?updatedAt=1777495796355" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/14.png?updatedAt=1777495796357" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <!-- Set 2 (duplicates for seamless loop) -->
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/1.png?updatedAt=1777495796029" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/2.png?updatedAt=1777495796365" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/3.png?updatedAt=1777495796040" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/4.png?updatedAt=1777495796252" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/5.png?updatedAt=1777495796180" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/6.png?updatedAt=1777495796162" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/7.png?updatedAt=1777495796262" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/8.png?updatedAt=1777495796264" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/9.png?updatedAt=1777495796339" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/10.png?updatedAt=1777495796399" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/11.png?updatedAt=1777495796330" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/12.png?updatedAt=1777495796301" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+      <div class="ba-pair">
+        <div class="ba-pair-images">
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/13.png?updatedAt=1777495796355" alt="Pirms"><span class="ba-pair-label" data-i18n="ba_before">Pirms</span></div>
+          <div class="ba-pair-half"><img src="https://ik.imagekit.io/erewhile/Solvata/Before%20and%20After/14.png?updatedAt=1777495796357" alt="Pēc"><span class="ba-pair-label" data-i18n="ba_after">Pēc</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video-section">
+  <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto">
+    <span class="section-label" data-i18n="video_label">Procedūras</span>
+    <h2 class="section-title" data-i18n="video_title">Skatiet <em>procedūras</em></h2>
+    <p class="section-sub" style="margin:0 auto" data-i18n="video_sub">Ieskats mūsu procedūrās.</p>
+  </div>
+  <div class="video-grid">
+    <div class="video-frame">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+        <source src="https://ik.imagekit.io/erewhile/Solvata/ZIONIC.mp4" type="video/mp4">
+      </video>
+      <div class="video-label-overlay">Zionic</div>
+    </div>
+    <div class="video-frame">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+        <source src="https://ik.imagekit.io/erewhile/Solvata/endospheres.mp4" type="video/mp4">
+      </video>
+      <div class="video-label-overlay">Endospheres</div>
+    </div>
+    <div class="video-frame">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+        <source src="https://ik.imagekit.io/erewhile/Solvata/Diodes%20lazers.mp4" type="video/mp4">
+      </video>
+      <div class="video-label-overlay">Diodes lāzers</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="reveal" style="max-width:600px">
+    <span class="section-label" data-i18n="reviews_label">Atsauksmes</span>
+    <h2 class="section-title" data-i18n="reviews_title">Ko saka <em>klienti</em></h2>
+  </div>
+  <div class="reviews-track">
+    <div class="review-card reveal-scale">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-i18n="review1_text">Ļoti viss patika 🤗 Gribu pierakstīties uz endosfēras kursu — 10 procedūras 🤗</p>
+      <div class="reviewer-proc" data-i18n="review1_proc">Endospheres</div>
+    </div>
+    <div class="review-card reveal-scale">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-i18n="review2_text">Man radās atsauksme pēc 5. endosfēras procedūras. Kājas ir ļoti manāmi nostiprinājušās, redzami muskuļi, āda, kas bija ļengana, ir ieguvusi tonusu, un vēdera "maisiņš" ir kļuvis mazāks — nekādi nevarēju no tā atbrīvoties. Nezinu ko tu ar mani izdarīji, bet kaut kas neticams 💪 Paldies par šādu brīnišķīgu pieredzi, jūtos lieliski! ❤️</p>
+      <div class="reviewer-proc" data-i18n="review2_proc">Endospheres</div>
+    </div>
+    <div class="review-card reveal-scale">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-i18n="review3_text">Pēc endosfēras jūtos tik labi — kā ja ūdens būtu noplūdis, pat kā pēc treniņa. ❤️❤️❤️</p>
+      <div class="reviewer-proc" data-i18n="review3_proc">Endospheres</div>
+    </div>
+    <div class="review-card reveal-scale">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-i18n="review4_text">Aplūkoju sevi spogulī. Grumbas kļuvušas mazākas, āda jūtas tonusā. Paldies par šādu lielisku dāvanu 💋</p>
+      <div class="reviewer-proc" data-i18n="review4_proc">Sejas procedūra</div>
+    </div>
+    <div class="review-card reveal-scale">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-i18n="review5_text">Sejas procedūra ir super — seja kļuva gludāka un liftings 👍 noteikti darīšu vēlreiz ❤️</p>
+      <div class="reviewer-proc" data-i18n="review5_proc">Sejas procedūra</div>
+    </div>
+    <div class="review-card reveal-scale">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text" data-i18n="review6_text">Gribu pateikties par rūpību meisterei, kura šodien man veica procedūru. Endosfēra izdarīta ļoti profesionāli, sejas masāža ir vienkārši fantastiska — tik daudz rūpības katrā vārdā un darbībā. Viņa ir liela gudriņa ❤️</p>
+      <div class="reviewer-proc" data-i18n="review6_proc">Endospheres + sejas masāža</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="booking-inner">
+
+    <!-- LEFT: Contact form -->
+    <div class="booking-left reveal">
+      <span class="section-label" data-i18n="book_label">Pieraksts</span>
+      <h2 class="section-title" data-i18n="book_title">Sāciet savu <em>ceļu</em><br>uz skaistumu</h2>
+      <p class="section-sub" style="margin-bottom:2.5rem" data-i18n="book_sub">Atstājiet kontaktinformāciju un mēs sazināsimies ar jums, lai vienotos par ērtāko laiku.</p>
+
+      <div id="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_name_label">Vārds</label>
+            <input type="text" class="form-input" id="f-name" data-i18n-ph="form_name_ph" placeholder="Jūsu vārds">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_phone_label">Tālrunis</label>
+            <input type="tel" class="form-input" id="f-phone" placeholder="+371 __ __ ____">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_email_label">E-pasts <span style="opacity:0.5;font-size:0.9em" data-i18n="form_optional">(neobligāti)</span></label>
+          <input type="email" class="form-input" id="f-email" data-i18n-ph="form_email_ph" placeholder="jūsu@epasts.lv">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_service_label">Pakalpojums</label>
+          <div class="form-select-wrap">
+            <select class="form-select" id="f-service">
+              <option value="" data-i18n="form_service_default">— Izvēlieties procedūru —</option>
+              <option value="zionic">Zionic</option>
+              <option value="endymed-mn">Endymed Intensive Microneedling</option>
+              <option value="endymed-fsr">Endymed FSR</option>
+              <option value="endyeye">ENDYEye — Eyes Lifting</option>
+              <option value="endospheres-body">Endospheres (ķermenis)</option>
+              <option value="endospheres-face">Endospheres (seja)</option>
+              <option value="geneo">Pollogen Geneo</option>
+              <option value="tripollar">TriPollar RF</option>
+              <option value="laser">Diodes lāzers Lamis XL</option>
+              <option value="consult" data-i18n="form_consult_opt">Konsultācija</option>
+            </select>
+          </div>
+        </div>
+        <button class="form-submit" onclick="submitForm()" data-i18n="book_btn">Pierakstīties</button>
+        <p class="form-note" data-i18n="form_note">Mēs sazināsimies ar jums 24 stundu laikā</p>
+      </div>
+      <div class="form-success" id="form-success">
+        <div style="font-size:2rem;margin-bottom:0.5rem">✦</div>
+        <span data-i18n="form_success_msg">Paldies! Mēs drīz sazināsimies ar jums.</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Alteg.io online booking placeholder -->
+    <div class="booking-right reveal">
+      <div class="alteg-block">
+        <div class="alteg-header">
+          <div class="alteg-header-label" data-i18n="alteg_label">Tiešsaistes pieraksts</div>
+          <div class="alteg-header-title" data-i18n="alteg_title">Izvēlieties ērtāko laiku</div>
+        </div>
+        <div class="alteg-body">
+          <p class="alteg-desc" data-i18n="alteg_desc">Izmantojiet mūsu tiešsaistes pieraksta sistēmu, lai izvēlētos ērtāko laiku un procedūru. Pieraksts pieejams 24/7.</p>
+          <!-- Alteg.io widget placeholder. Replace this div with the Alteg.io embed script/iframe when ready. -->
+          <div class="alteg-placeholder" id="alteg-widget">
+            <div class="alteg-placeholder-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="8" cy="15" r="1.5" fill="currentColor"/><circle cx="12" cy="15" r="1.5" fill="currentColor"/><circle cx="16" cy="15" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <div class="alteg-placeholder-title" data-i18n="alteg_ph_title">Alteg.io kalendārs</div>
+            <div class="alteg-placeholder-sub" data-i18n="alteg_ph_sub">Šeit tiks integrēts tiešsaistes<br>pieraksta kalendārs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="reveal" style="max-width:600px">
+    <span class="section-label" data-i18n="team_label">Mūsu komanda</span>
+    <h2 class="section-title" data-i18n="team_title">Cilvēki aiz <em>Solvata</em></h2>
+    <p class="section-sub" data-i18n="team_sub">Speciālistes ar medicīnisko izglītību, kas nemitīgi pilnveido savas zināšanas un patiesi rūpējas par katras klientēs rezultātu.</p>
+  </div>
+  <div class="team-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 700px; margin-left: auto; margin-right: auto;">
+
+    <!-- Diana - Director -->
+    <div class="team-card reveal">
+      <div class="team-avatar">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/Stuff/1.png?updatedAt=1777477115181" alt="Diāna">
+      </div>
+      <div class="team-name" data-i18n="team1_name">Diāna Ručevska</div>
+      <div class="team-role" data-i18n="team1_role">Direktore</div>
+      <p class="team-quote" data-i18n="team1_quote">«Katrai sievietei ir sava skaistuma valoda — mans uzdevums ir palīdzēt to atrast.»</p>
+    </div>
+
+    <!-- Elina -->
+    <div class="team-card reveal">
+      <div class="team-avatar">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/Stuff/2.png?updatedAt=1777477115105" alt="Elīna Veļesova">
+      </div>
+      <div class="team-name" data-i18n="team2_name">Elīna Veļesova</div>
+      <div class="team-role" data-i18n="team2_role">Skaistumkopšanas speciāliste</div>
+      <p class="team-quote" data-i18n="team2_quote">«Latvijas Universitātes P. Stradiņa medicīnas koledža · RF tehnoloģiju eksperte»</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICE MODALS -->
+
+<!-- Zionic -->
+<div class="price-modal-overlay" id="modal-zionic" onclick="closeModalOutside(event, 'modal-zionic')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-zionic')">✕</button>
+    <div class="price-modal-title">Zionic</div>
+    <div class="price-modal-subtitle" data-i18n="modal_body_label">Ķermeņa procedūras</div>
+    <div class="price-group">
+      <div class="price-row"><span class="price-row-name" data-i18n="z_intro">Iepazīšanās procedūra (2 zonas)</span><span class="price-row-price">55€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_trap">Trapeces zona</span><span class="price-row-price">39€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_lymph">Ķermeņa limfodrenāža ar RF</span><span class="price-row-price">45€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_back">Visa mugura</span><span class="price-row-price">55€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_2zones">Divas nelielas zonas (apakšējā ķermeņa daļa)</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_arms">Rokas</span><span class="price-row-price">39€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_arms6">Rokas, abonements x6</span><span class="price-row-price">210€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_arms10">Rokas, abonements x10</span><span class="price-row-price">300€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_belly">Vēders un sāni</span><span class="price-row-price">55€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_belly6">Vēders un sāni, abonements x6</span><span class="price-row-price">230€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_belly10">Vēders un sāni, abonements x10</span><span class="price-row-price">350€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_legs_front">Kāju priekšējā daļa</span><span class="price-row-price">59€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_legs_front6">Kāju priekšējā daļa, abonements x6</span><span class="price-row-price">280€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_legs_full">Pilnas kājas</span><span class="price-row-price">79€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_legs_full6">Pilnas kājas, abonements x6</span><span class="price-row-price">330€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_legs_full10">Pilnas kājas, abonements x10</span><span class="price-row-price">510€</span></div>
+    </div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_combos">Komplekti</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_c1">Kājas + sēža</span><span class="price-row-price">69€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_c1_6">Kājas + sēža, abonements x6</span><span class="price-row-price">350€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_c2">Kājas + vēders</span><span class="price-row-price">74€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_c2_6">Kājas + vēders, abonements x6</span><span class="price-row-price">380€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_c3">Kājas + sēža + vēders</span><span class="price-row-price">99€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="z_c3_6">Kājas + sēža + vēders, abonements x6</span><span class="price-row-price">480€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Endymed Microneedling -->
+<div class="price-modal-overlay" id="modal-endymed-mn" onclick="closeModalOutside(event, 'modal-endymed-mn')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-endymed-mn')">✕</button>
+    <div class="price-modal-title">Endymed Intensive Microneedling</div>
+    <div class="price-modal-subtitle" data-i18n="modal_face_label">Sejas procedūras</div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_device_endymed">Aparāts Endymed</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="mn_eye">RF mikronīdlings acu zonai (3 procedūras)</span><span class="price-row-price">250€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="mn_face">RF mikronīdlings sejai</span><span class="price-row-price">230€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="mn_face_neck">RF mikronīdlings sejai un kaklam</span><span class="price-row-price">250€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="mn_face_neck_dec">RF mikronīdlings sejai, kaklam un dekoltē</span><span class="price-row-price">300€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="mn_belly">RF mikronīdlings vēderam</span><span class="price-row-price">220€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Endymed FSR -->
+<div class="price-modal-overlay" id="modal-endymed-fsr" onclick="closeModalOutside(event, 'modal-endymed-fsr')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-endymed-fsr')">✕</button>
+    <div class="price-modal-title">Endymed FSR</div>
+    <div class="price-modal-subtitle" data-i18n="modal_face_label">Sejas procedūras</div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_device_fsr">Aparāts Endymed FSR</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="fsr_eye_zone">Frakcionēta RF ādas slīpēšana acu zonai</span><span class="price-row-price">59€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="fsr_face_p">Frakcionēta RF ādas slīpēšana sejai</span><span class="price-row-price">129€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="fsr_face_neck_p">Frakcionēta RF ādas slīpēšana sejai un kaklam</span><span class="price-row-price">149€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="fsr_face_neck_dec_p">Frakcionēta RF ādas slīpēšana sejai, kaklam un dekoltē</span><span class="price-row-price">169€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="fsr_scars_p">Frakcionēta RF ādas slīpēšana rētām (jebkurai zonai)</span><span class="price-row-price">35–260€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ENDYEye -->
+<div class="price-modal-overlay" id="modal-endyeye" onclick="closeModalOutside(event, 'modal-endyeye')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-endyeye')">✕</button>
+    <div class="price-modal-title">ENDYEye — Eyes Lifting</div>
+    <div class="price-modal-subtitle" data-i18n="modal_face_label">Sejas procedūras</div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_device_pollogen">Aparāts Pollogen</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="eye_tp_eye">TriPollar RF-liftings acu zonai</span><span class="price-row-price">35€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="eye_tp_eye5">TriPollar RF-liftings acu zonai x5 (abonements)</span><span class="price-row-price">150€</span></div>
+    </div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_device_endymed">Aparāts Endymed</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="mn_eye">RF mikronīdlings acu zonai (3 procedūras)</span><span class="price-row-price">250€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Endospheres -->
+<div class="price-modal-overlay" id="modal-endospheres" onclick="closeModalOutside(event, 'modal-endospheres')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-endospheres')">✕</button>
+    <div class="price-modal-title">Endospheres</div>
+    <div class="price-modal-subtitle" data-i18n="modal_face_body_label">Seja un ķermenis</div>
+    <div class="price-highlight">
+      <span data-i18n="endo_first_session_full">Pirmais seanss</span>
+      <span class="price-row-price">35€</span>
+    </div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_face">Seja</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_face">Endosfēra sejai</span><span class="price-row-price">30€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_face_care">Endosfēra sejai (+ kopšana un maska)</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_face_dec">Endosfēra sejai un dekoltē zonai</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_face_dec_care">Endosfēra sejai un dekoltē (+ kopšana un maska)</span><span class="price-row-price">50€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_face6">Abonements x6</span><span class="price-row-price">170€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_face10">Abonements x10</span><span class="price-row-price">270€</span></div>
+    </div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_body">Ķermenis</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_intro1">Iepazīšanās procedūra (1 problemzona)</span><span class="price-row-price">35€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_intro2">Iepazīšanās procedūra (viss ķermenis)</span><span class="price-row-price">50€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_zone">Endosfēra problēmzonai</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_full">Endosfēra visam ķermenim</span><span class="price-row-price">60€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_zone6">Abonements x6 (problēmzona)</span><span class="price-row-price">220€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_zone10">Abonements x10 (problēmzona)</span><span class="price-row-price">350€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_full6">Abonements x6 (viss ķermenis)</span><span class="price-row-price">320€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="es_body_full10">Abonements x10 (viss ķermenis)</span><span class="price-row-price">520€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Pollogen Geneo -->
+<div class="price-modal-overlay" id="modal-geneo" onclick="closeModalOutside(event, 'modal-geneo')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-geneo')">✕</button>
+    <div class="price-modal-title">Pollogen Geneo</div>
+    <div class="price-modal-subtitle" data-i18n="modal_face_label">Sejas procedūras</div>
+    <div class="price-group">
+      <div class="price-row"><span class="price-row-name" data-i18n="geo_face">GeneO sejai</span><span class="price-row-price">99€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="geo_face_hands">GeneO sejai un roku masāža</span><span class="price-row-price">119€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="geo_face_dec">GeneO sejai un dekoltē</span><span class="price-row-price">129€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="geo_face_dec_hands">GeneO sejai, dekoltē un rokām</span><span class="price-row-price">139€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="geo_back">GeneO mugurai</span><span class="price-row-price">65–100€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TriPollar RF -->
+<div class="price-modal-overlay" id="modal-tripollar" onclick="closeModalOutside(event, 'modal-tripollar')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-tripollar')">✕</button>
+    <div class="price-modal-title">TriPollar RF</div>
+    <div class="price-modal-subtitle" data-i18n="modal_face_label">Sejas procedūras</div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_device_pollogen">Aparāts Pollogen</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="tp_eye">TriPollar RF-liftings acu zonai</span><span class="price-row-price">35€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="tp_eye5">TriPollar RF-liftings acu zonai x5 (abonements)</span><span class="price-row-price">150€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="tp_face">TriPollar RF-liftings</span><span class="price-row-price">50€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="tp_face5">TriPollar RF-liftings x5 (abonements)</span><span class="price-row-price">200€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Diodes Laser -->
+<div class="price-modal-overlay" id="modal-laser" onclick="closeModalOutside(event, 'modal-laser')">
+  <div class="price-modal">
+    <button class="price-modal-close" onclick="closeModal('modal-laser')">✕</button>
+    <div class="price-modal-title">Diodes lāzers Lamis XL</div>
+    <div class="price-modal-subtitle" data-i18n="modal_laser_label">Lāzerepiācija</div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_face">Seja</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_face">Seja</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_lip">Augšlūpa</span><span class="price-row-price">15€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_chin">Zods</span><span class="price-row-price">15€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_brow">Zona starp uzacīm</span><span class="price-row-price">15€</span></div>
+    </div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_body">Ķermenis</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_bikini_cl">Klasiskais bikini</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_bikini_deep">Dziļais bikini</span><span class="price-row-price">50€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_bikini_glut">Dziļais bikini + sēžas zona</span><span class="price-row-price">60€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_armpits">Paduses</span><span class="price-row-price">45€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_belly_line">Vēdera baltā līnija</span><span class="price-row-price">15€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_nipples">Krūšu gali</span><span class="price-row-price">10€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_arms_half">Rokas līdz elkonim</span><span class="price-row-price">40€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_arms_full">Rokas pilnā garumā</span><span class="price-row-price">70€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_legs_half">Kājas līdz ceļiem</span><span class="price-row-price">70€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_legs_full">Kājas pilnā garumā</span><span class="price-row-price">110€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_back">Mugura</span><span class="price-row-price">120€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_chest">Krūšu kurvja priekšējā daļa</span><span class="price-row-price">120€</span></div>
+    </div>
+    <div class="price-group">
+      <div class="price-group-title" data-i18n="modal_combos">Komplekti</div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_c1">Paduses + dziļais bikini</span><span class="price-row-price">85€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_c2">Kājas līdz ceļiem + dziļais bikini</span><span class="price-row-price">110€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_c3">Kājas pilnā garumā + paduses</span><span class="price-row-price">140€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_c4">Kājas pilnā garumā + dziļais bikini</span><span class="price-row-price">150€</span></div>
+      <div class="price-row"><span class="price-row-name" data-i18n="las_c5">Kājas pilnā garumā + dziļais bikini + paduses</span><span class="price-row-price">160€</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="nav-logo">Solvata <span>Beauty</span></a>
+    <p class="footer-desc" data-i18n="footer_desc">Profesionāla aparatūras kosmetoloģija Rīgā. Premium iekārtas, individuāla pieeja.</p>
+  </div>
+  <div class="footer-col">
+    <h4 data-i18n="footer_services">Pakalpojumi</h4>
+    <a href="#">Zionic</a>
+    <a href="#">Endymed Microneedling</a>
+    <a href="#">Endymed FSR</a>
+    <a href="#">Endospheres</a>
+    <a href="#">Pollogen Geneo</a>
+    <a href="#">Diodes lāzers Lamis XL</a>
+  </div>
+  <div class="footer-col">
+    <h4 data-i18n="footer_contact">Kontakti</h4>
+    <a href="mailto:info@solvatabeauty.lv">info@solvatabeauty.lv</a>
+    <a href="https://www.instagram.com/solvatabeauty/" target="_blank">@solvatabeauty</a>
+    <a href="https://maps.google.com/?q=Deļu+iela+4,+Riga" target="_blank">Mūkusalas biznesa centrs,<br>Deļu iela 4, Rīga LV-1004</a>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 Solvata Beauty. <span data-i18n="footer_rights">Visas tiesības aizsargātas.</span></span>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// SCROLL REVEAL — unified observer
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      const delay = parseInt(e.target.dataset.delay) || 0;
+      setTimeout(() => {
+        e.target.classList.add('visible');
+        e.target.classList.add('in-view');
+      }, delay);
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+
+// Section-level observer — triggers label underline and divider animation
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
+      // Animate dividers inside this section
+      e.target.querySelectorAll('.section-divider').forEach(d => d.classList.add('visible-line'));
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(s => sectionObserver.observe(s));
+
+// Add animate-hidden to all reveal elements
+document.querySelectorAll('.equip-card, .why-card, .ba-card, .team-card, .reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el, i) => {
+  el.dataset.delay = (i % 5) * 90;
+  el.classList.add('animate-hidden');
+  revealObserver.observe(el);
+});
+
+// Fallback: show everything after 1s
+setTimeout(() => {
+  document.querySelectorAll('.equip-card, .why-card, .ba-card, .team-card, .reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+    el.classList.add('visible');
+  });
+  document.querySelectorAll('.section-divider').forEach(d => d.classList.add('visible-line'));
+}, 1000);
+
+// PARALLAX on hero orbs
+document.addEventListener('mousemove', e => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 30;
+  const y = (e.clientY / window.innerHeight - 0.5) * 30;
+  document.querySelectorAll('.hero-orb').forEach((orb, i) => {
+    const factor = i === 0 ? 1 : -0.6;
+    orb.style.transform = `translate(${x*factor}px, ${y*factor}px)`;
+  });
+});
+
+// NAV SCROLL
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 60) {
+    nav.style.background = 'rgba(250,248,247,0.95)';
+    nav.style.boxShadow = '0 2px 24px rgba(65,0,34,0.08)';
+  } else {
+    nav.style.background = 'rgba(250,248,247,0.85)';
+    nav.style.boxShadow = 'none';
+  }
+});
+
+// MODAL FUNCTIONS
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e, id) {
+  if (e.target === document.getElementById(id)) closeModal(id);
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.querySelectorAll('.price-modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow = ''; });
+});
+
+// FORM SUBMIT
+function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  if (!name || !phone) {
+    const inp = !name ? document.getElementById('f-name') : document.getElementById('f-phone');
+    inp.style.borderColor = 'rgba(65,0,34,0.6)';
+    inp.focus();
+    setTimeout(() => inp.style.borderColor = '', 2000);
+    return;
+  }
+  document.getElementById('booking-form').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+  // TODO: replace with actual form submission (fetch/ajax to your backend or form service)
+}
+
+// ================================
+// MULTILINGUAL
+// ================================
+const translations = {
+  lv: {
+    nav_mission:"Misija", nav_equipment:"Aprīkojums", nav_why:"Par mums", nav_team:"Komanda", nav_reviews:"Atsauksmes", nav_book:"Pierakstīties",
+    hero_label:"Aparatūras kosmetoloģija · Rīga",
+    hero_title:"Dabiskais <em>skaistums</em><br>un jaunība",
+    hero_subtitle:"Ar rūpību un zinātniski pamatotas aparatūras palīdzību atbalstām sejas un ķermeņa ādas veselību — maigi, efektīvi un ar ilgstošu rezultātu.",
+    hero_cta:"Pierakstīties uz procedūru", hero_cta2:"Mūsu tehnoloģijas",
+    hero_stat1:"Premium iekārtas", hero_stat2:"Gadu pieredze", hero_stat3:"Endospheres — 1. seanss",
+    mission_label:"Mūsu misija",
+    mission_title:"Ādas <em>veselība</em><br>ir mūsu prioritāte",
+    mission_quote:"Mēs ticam, ka skaistums ir veselīgas, labi koptas ādas rezultāts — ne maska. Tāpēc katru procedūru izvēlamies apzināti un ar atbildību.",
+    mission_text:"Strādājam tikai ar oriģinālām premium iekārtām, kas izgājušas klīniskos pētījumus un ir sertificētas. Katrai klientei — individuāls protokols un godīgs rezultāts.",
+    badge_certified:"Klīniski pārbaudīts", badge_original:"Oriģināls aprīkojums", badge_individual:"Individuāla pieeja", badge_medical:"Medicīniskā izglītība",
+    equip_label:"Mūsu aprīkojums",
+    equip_title:"Tehnoloģijas un <em>iekārtas</em>",
+    equip_sub:"Premium klases aparatūra ar klīniski pierādītu efektivitāti — izvēlēta ar augstu atbildību par katras klientēs drošumu un rezultātu.",
+    zionic_desc:"Unikāla kombinācija: dziļš rotācijas masāžs + rezistīvā radiofrekvence vienā procedūrā. Audu probiešana notiek dziļāk, un efekts — uzvilkta, gluda āda — parādās jau pirmajās seansēs. Procedūra jūtama kā silts masāžs.",
+    zionic_e1:"Celulīta mazināšana", zionic_e2:"Ādas nostiprināšana", zionic_e3:"Ķermeņa kontūras", zionic_e4:"Limfodrenāža", zionic_e5:"Ātrāk redzams efekts", zionic_e6:"Ādas kvalitāte",
+    endymed_mn_desc:"Procedūra atjauno ādu no iekšpuses — aktivizē jauna kolagēna un elastīna veidošanos. Āda kļūst blīvāka, gludāka un jaunīgāka bez ķirurģijas. Efekts pieaug 2–3 mēnešu laikā.",
+    endymed_e1:"Liftings un savilkšana", endymed_e2:"Rētas un strijas", endymed_e3:"Pēcaknes ārstēšana", endymed_e4:"Pigmentācija",
+    endymed_mn_extra:"Rehabilitācija: 3–7 dienas · 2–3 procedūras · Efekts līdz 2 gadiem",
+    endymed_fsr_desc:"Viegla ādas slīpēšana un RF liftings vienlaicīgi — āda kļūst spožāka, vienādāka un blīvāka. Īsāks rehabilitācijas periods nekā lāzera procedūrām. Ideāli piemērots pēcaknes korekcijai un ādas tona izlīdzināšanai.",
+    fsr_e1:"Pigmentācija", fsr_e2:"Paplašinātas poras", fsr_e3:"Pēcaknes rētas", fsr_e4:"Grumbas", fsr_e5:"Dubultais zods", fsr_e6:"Ādas spīdums",
+    fsr_extra:"Tūlītējs rezultāts · Īss rehabilitācijas periods · Bez blakusparādībām",
+    endyeye_desc:"Bezoperācijas alternatīva blefaroplastikai. Trīs Endymed tehnoloģijas vienā protokolā ievelk plakstiņa ādu, mazina pietūkumu un izlīdzina zosu pēdas — bez iejaukšanās un atveseļošanās perioda.",
+    endyeye_e1:"Plakstiņu liftings", endyeye_e2:"Pietūkums zem acīm", endyeye_e3:"Zosu pēdas", endyeye_e4:"Ādas blīvums",
+    endyeye_extra:"RF liftings · RF mikronīdlings · Frakcionāla atjaunošana",
+    endo_desc:"Kompresijas mikrovibrācijas tehnoloģija, kas izstrādāta kopā ar flebologu. Iedarbojas ne tikai uz ādu, bet uzlabo cirkulāciju audos — mazina tūsku, nogurumu kājās un nostiprina ādas struktūru. Darbojas arī sejai: ovāla liftings, ādas tonis un svaigāks izskats.",
+    endo_e1:"Tūskas mazināšana", endo_e2:"Limfas drenāža", endo_e3:"Gludāka āda", endo_e4:"Celulīts", endo_e5:"Mikrocirkulācija",
+    endo_course:"Bez atveseļošanās perioda · Rezultāts redzams pēc 1. procedūras · Kurss: 6–12 procedūras",
+    endo_face_title:"Endospheres sejai — ovāla liftings un ādas tonis",
+    endo_f1:"Tūskas mazināšana", endo_f2:"Mikrocirkulācija", endo_f3:"Ādas tonis un blīvums", endo_f4:"Sejas ovāls", endo_f5:"Svaigāks izskats",
+    geneo_desc:"3-in-1 procedūra, kas vienlaicīgi tīra, piesātina ādu ar skābekli un stimulē kolagēna veidošanos. Redzams rezultāts jau pēc pirmās reizes — spīdums, svaigums un uzvilkta āda bez agresīvas iedarbības.",
+    geneo_e1:"OxyGeneo skābekļa terapija", geneo_e2:"RF liftings", geneo_e3:"Ultraskaņa", geneo_e4:"Glow efekts", geneo_e5:"Pigmentācija un akne",
+    geneo_extra:"Kapsulas pēc izvēles: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome",
+    tripollar_desc:"Klasiskais RF liftings — maigs, bez ādas bojājumiem. Uzsilda audus, stimulē kolagēnu un nodrošina redzamu mīksto audu savilkšanu jau pēc pirmās procedūras. Lielisks kā regulāra kopšanas procedūra.",
+    tripollar_e1:"Ādas savilkšana", tripollar_e2:"Grumbas", tripollar_e3:"Sejas ovāls", tripollar_e4:"Viegls lipolīzs", tripollar_e5:"Ādas tonuss",
+    tripollar_extra:"Efekts pēc 1. procedūras · Kurss — ilglaicīgs rezultāts · Piemērots regulārai kopšanai",
+    laser_desc:"Mūsdienīgs diodes lāzers ilglaicīgai epilācijai. Ar dzesēšanas sistēmu — ērti un droši visiem ādas tipiem. Mati kļūst retāki jau pēc pirmajiem seansiem, āda paliek gluda uz ilgu laiku.",
+    laser_e1:"Ilglaicīga epilācija", laser_e2:"Gluda āda", laser_e3:"Visi ādas tipi", laser_e4:"Mazāks diskomforts",
+    laser_extra:"Kurss: 6–12 procedūras · Sejai un ķermenim",
+    why_label:"Mūsu priekšrocības", why_title:"Kāpēc <em>izvēlēties</em> mūs",
+    why_sub:"Mēs ne tikai veicam procedūras — mēs veidojam ilgtermiņa kopšanas sistēmu katrai klientei.",
+    why1_title:"Individuāla pieeja", why1_desc:"Katrs protokols tiek veidots personīgi — atbilstoši ādas stāvoklim un mērķiem.",
+    why2_title:"Sertificēts aprīkojums", why2_desc:"Tikai oriģinālas iekārtas ar klīniski pierādītu efektivitāti un FDA sertifikātiem.",
+    why3_title:"Kompleksi risinājumi", why3_desc:"Kombinējam tehnoloģijas, lai sasniegtu labāko un ilgstošāko rezultātu.",
+    why4_title:"Medicīniskā kompetence", why4_desc:"Speciālistes ar medicīnisko izglītību un pastāvīgu zināšanu pilnveidi.",
+    why5_title:"Godīgums", why5_desc:"Skaidri izskaidrojam ko procedūra dos — bez pārspīlētiem solījumiem.",
+    why6_title:"Komforts un rūpes", why6_desc:"No pirmā zvana līdz rezultātam — par jums rūpējas vienā līmenī.",
+    ba_label:"Rezultāti", ba_title:"Pirms un <em>pēc</em>", ba_sub:"Reāli rezultāti mūsu klientēm.",
+    ba_before:"Pirms", ba_after:"Pēc", ba_sessions3:"3 procedūras", ba_sessions10:"10 procedūras", ba_sessions8:"8 procedūras",
+    video_label:"Procedūras", video_title:"Skatiet <em>procedūras</em>", video_sub:"Ieskats mūsu ikdienas darbā.",
+    reviews_label:"Atsauksmes", reviews_title:"Ko saka <em>klientēs</em>",
+    review1_text:"Ļoti viss patika 🤗 Gribu pierakstīties uz endosfēras kursu — 10 procedūras 🤗",
+    review1_proc:"Endospheres",
+    review2_text:"Man radās atsauksme pēc 5. endosfēras procedūras. Kājas ir ļoti manāmi nostiprinājušās, redzami muskuļi, āda, kas bija ļengana, ir ieguvusi tonusu, un vēdera maisiņš kļuvis mazāks. Kaut kas neticams 💪 Paldies par šādu brīnišķīgu pieredzi! ❤️",
+    review2_proc:"Endospheres",
+    review3_text:"Šeit Solvatā meitenes ļoti labi taisa. Paldies meistarēm — abas ir superīgas! Noteikti iesaku. Tiem, kas sporto — perfekti atslābina muskuļus, uzlabo cirkulāciju, noņem tūsku. Jau pēc pirmās reizes rezultāts ir jūtams 😊",
+    review3_proc:"Endospheres",
+    review4_text:"Aplūkoju sevi spogulī. Grumbas kļuvušas mazākas, āda jūtas tonusā. Paldies par šādu lielisku dāvanu 💋",
+    review4_proc:"Sejas procedūra",
+    review5_text:"Sejas procedūra ir super — seja kļuva gludāka un liftings jūtams 👍 Noteikti darīšu vēlreiz ❤️",
+    review5_proc:"Sejas procedūra",
+    review6_text:"Gribu pateikties meisterei, kura šodien man veica procedūru. Endosfēra izdarīta ļoti profesionāli, sejas masāža — vienkārši fantastiska. Tik daudz rūpības katrā darbībā ❤️",
+    review6_proc:"Endospheres + sejas masāža",
+    book_label:"Pieraksts", book_title:"Sāciet savu <em>ceļu</em><br>uz skaistumu",
+    book_sub:"Atstājiet kontaktinformāciju — mēs sazināsimies un vienosimies par jums ērtāko laiku.",
+    book_phone_ph:"+371 __ __ ____", book_btn:"Pierakstīties",
+    form_name_label:"Vārds", form_name_ph:"Jūsu vārds",
+    form_phone_label:"Tālrunis",
+    form_email_label:"E-pasts", form_optional:"(neobligāti)", form_email_ph:"jūsu@epasts.lv",
+    form_service_label:"Procedūra", form_service_default:"— Izvēlieties procedūru —", form_consult_opt:"Konsultācija",
+    form_note:"Mēs sazināsimies ar jums 24 stundu laikā",
+    form_success_msg:"Paldies! Drīz būsim saskarē.",
+    alteg_label:"Tiešsaistes pieraksts", alteg_title:"Izvēlieties ērtāko laiku",
+    alteg_desc:"Pierakstieties tiešsaistē — izvēlieties procedūru un laiku, kas jums der. Pieejams 24/7.",
+    alteg_ph_title:"Alteg.io kalendārs", alteg_ph_sub:"Šeit tiks integrēts tiešsaistes pieraksta kalendārs",
+    team_label:"Mūsu komanda", team_title:"Cilvēki aiz <em>Solvata</em>",
+    team_sub:"Speciālistes ar medicīnisko izglītību, kas nemitīgi pilnveido savas zināšanas un patiesi rūpējas par katras klientēs rezultātu.",
+    team1_name:"Diāna Ručevska", team1_role:"Direktore un dibinātāja", team1_quote:"«Solvata Beauty dibinātāja. Piecus gadus attīsta aparatūras kosmetoloģiju Latvijā — ar pārliecību, ka katrai sievietei pienākas profesionāla pieeja un reāls rezultāts.»",
+    team2_name:"Elīna Veļesova", team2_role:"Skaistumkopšanas speciāliste", team2_quote:"«LU P. Stradiņa medicīnas koledža · RF tehnoloģiju eksperte · Pastāvīga kvalifikācijas pilnveide»",
+    nav_services:"Pakalpojumi", equip_subpage_btn:"Visi pakalpojumi un detalizēts apraksts →",
+    price_btn_zionic:"Cenas", price_btn_endymed:"Cenas", price_btn_fsr:"Cenas",
+    price_btn_endyeye:"Cenas", price_btn_endospheres:"Cenas", price_btn_geneo:"Cenas",
+    price_btn_tripollar:"Cenas", price_btn_laser:"Cenas",
+    endo_first_session:"1. seanss — 35€", endo_first_session_full:"Pirmais seanss",
+    modal_body_label:"Ķermeņa procedūras", modal_face_label:"Sejas procedūras",
+    modal_face_body_label:"Seja un ķermenis", modal_laser_label:"Lāzerepiācija",
+    modal_face:"Seja", modal_body:"Ķermenis", modal_combos:"Komplekti",
+    modal_device_endymed:"Aparāts Endymed", modal_device_fsr:"Aparāts Endymed FSR",
+    modal_device_pollogen:"Aparāts Pollogen",
+    z_intro:"Iepazīšanās procedūra (2 zonas)",
+    z_trap:"Trapeces zona",
+    z_lymph:"Ķermeņa limfodrenāža ar RF",
+    z_back:"Visa mugura",
+    z_2zones:"Divas nelielas zonas (apakšējā ķermeņa daļa)",
+    z_arms:"Rokas",
+    z_arms6:"Rokas, abonements x6",
+    z_arms10:"Rokas, abonements x10",
+    z_belly:"Vēders un sāni",
+    z_belly6:"Vēders un sāni, abonements x6",
+    z_belly10:"Vēders un sāni, abonements x10",
+    z_legs_front:"Kāju priekšējā daļa",
+    z_legs_front6:"Kāju priekšējā daļa, abonements x6",
+    z_legs_full:"Pilnas kājas",
+    z_legs_full6:"Pilnas kājas, abonements x6",
+    z_legs_full10:"Pilnas kājas, abonements x10",
+    z_c1:"Kājas + sēža",
+    z_c1_6:"Kājas + sēža, abonements x6",
+    z_c2:"Kājas + vēders",
+    z_c2_6:"Kājas + vēders, abonements x6",
+    z_c3:"Kājas + sēža + vēders",
+    z_c3_6:"Kājas + sēža + vēders, abonements x6",
+    mn_eye:"RF mikronīdlings acu zonai (3 procedūras)",
+    mn_face:"RF mikronīdlings sejai",
+    mn_face_neck:"RF mikronīdlings sejai un kaklam",
+    mn_face_neck_dec:"RF mikronīdlings sejai, kaklam un dekoltē",
+    mn_belly:"RF mikronīdlings vēderam",
+    fsr_eye_zone:"Frakcionēta RF ādas slīpēšana acu zonai",
+    fsr_face_p:"Frakcionēta RF ādas slīpēšana sejai",
+    fsr_face_neck_p:"Frakcionēta RF ādas slīpēšana sejai un kaklam",
+    fsr_face_neck_dec_p:"Frakcionēta RF ādas slīpēšana sejai, kaklam un dekoltē",
+    fsr_scars_p:"Frakcionēta RF ādas slīpēšana rētām (jebkurai zonai)",
+    eye_tp_eye:"TriPollar RF-liftings acu zonai",
+    eye_tp_eye5:"TriPollar RF-liftings acu zonai x5 (abonements)",
+    es_face:"Endosfēra sejai",
+    es_face_care:"Endosfēra sejai (+ kopšana un maska)",
+    es_face_dec:"Endosfēra sejai un dekoltē zonai",
+    es_face_dec_care:"Endosfēra sejai un dekoltē (+ kopšana un maska)",
+    es_face6:"Abonements x6",
+    es_face10:"Abonements x10",
+    es_body_intro1:"Iepazīšanās procedūra (1 problēmzona)",
+    es_body_intro2:"Iepazīšanās procedūra (viss ķermenis)",
+    es_body_zone:"Endosfēra problēmzonai",
+    es_body_full:"Endosfēra visam ķermenim",
+    es_body_zone6:"Abonements x6 (problēmzona)",
+    es_body_zone10:"Abonements x10 (problēmzona)",
+    es_body_full6:"Abonements x6 (viss ķermenis)",
+    es_body_full10:"Abonements x10 (viss ķermenis)",
+    geo_face:"GeneO sejai",
+    geo_face_hands:"GeneO sejai un roku masāža",
+    geo_face_dec:"GeneO sejai un dekoltē",
+    geo_face_dec_hands:"GeneO sejai, dekoltē un rokām",
+    geo_back:"GeneO mugurai",
+    tp_eye:"TriPollar RF-liftings acu zonai",
+    tp_eye5:"TriPollar RF-liftings acu zonai x5 (abonements)",
+    tp_face:"TriPollar RF-liftings",
+    tp_face5:"TriPollar RF-liftings x5 (abonements)",
+    las_face:"Seja",
+    las_lip:"Augšlūpa",
+    las_chin:"Zods",
+    las_brow:"Zona starp uzacīm",
+    las_bikini_cl:"Klasiskais bikini",
+    las_bikini_deep:"Dziļais bikini",
+    las_bikini_glut:"Dziļais bikini + sēžas zona",
+    las_armpits:"Paduses",
+    las_belly_line:"Vēdera baltā līnija",
+    las_nipples:"Krūšu gali",
+    las_arms_half:"Rokas līdz elkonim",
+    las_arms_full:"Rokas pilnā garumā",
+    las_legs_half:"Kājas līdz ceļiem",
+    las_legs_full:"Kājas pilnā garumā",
+    las_back:"Mugura",
+    las_chest:"Krūšu kurvja priekšējā daļa",
+    las_c1:"Paduses + dziļais bikini",
+    las_c2:"Kājas līdz ceļiem + dziļais bikini",
+    las_c3:"Kājas pilnā garumā + paduses",
+    las_c4:"Kājas pilnā garumā + dziļais bikini",
+    las_c5:"Kājas pilnā garumā + dziļais bikini + paduses",
+    modal_laser_label:"Lāzerepilācija",
+    footer_desc:"Aparatūras kosmetoloģija Rīgā ar premium iekārtām un individuālu pieeju katrai klientei.",
+    footer_services:"Pakalpojumi", footer_contact:"Kontakti", footer_rights:"Visas tiesības aizsargātas."
+  },
+
+  ru: {
+    nav_mission:"Миссия", nav_equipment:"Процедуры", nav_why:"О нас", nav_team:"Команда", nav_reviews:"Отзывы", nav_book:"Записаться",
+    hero_label:"Аппаратная косметология · Рига",
+    hero_title:"Природная <em>красота</em><br>и молодость",
+    hero_subtitle:"С помощью научно обоснованной аппаратной косметологии бережно поддерживаем здоровье кожи — мягко, эффективно и с долгосрочным результатом.",
+    hero_cta:"Записаться на процедуру", hero_cta2:"Наши технологии",
+    hero_stat1:"Premium аппараты", hero_stat2:"Лет опыта", hero_stat3:"Endospheres — 1-й сеанс",
+    mission_label:"Наша миссия",
+    mission_title:"Здоровье кожи — <em>наш</em> приоритет",
+    mission_quote:"Мы верим, что красота — это результат здоровой, ухоженной кожи, а не маска. Поэтому каждую процедуру выбираем осознанно и с ответственностью.",
+    mission_text:"Работаем только с оригинальными premium-аппаратами, прошедшими клинические исследования и имеющими сертификаты. Каждой клиентке — индивидуальный протокол и честный результат.",
+    badge_certified:"Клинически проверено", badge_original:"Оригинальное оборудование", badge_individual:"Индивидуальный подход", badge_medical:"Медицинское образование",
+    equip_label:"Наше оборудование",
+    equip_title:"Технологии и <em>аппараты</em>",
+    equip_sub:"Аппаратура премиум-класса с клинически доказанной эффективностью — выбранная с высокой ответственностью за безопасность и результат каждой клиентки.",
+    zionic_desc:"Уникальная комбинация: глубокий ротационный массаж + резистивная радиочастота в одной процедуре. Ткани прорабатываются глубже, а эффект — подтянутая и более гладкая кожа — заметен уже после первых сеансов. Ощущается как тёплый массаж.",
+    zionic_e1:"Уменьшение целлюлита", zionic_e2:"Подтяжка кожи", zionic_e3:"Коррекция контуров", zionic_e4:"Лимфодренаж", zionic_e5:"Быстрый видимый эффект", zionic_e6:"Качество кожи",
+    endymed_mn_desc:"Процедура обновляет кожу изнутри — запускает активную выработку нового коллагена и эластина. Кожа становится плотной, гладкой и молодой без хирургии. Эффект нарастает в течение 2–3 месяцев.",
+    endymed_e1:"Лифтинг и подтяжка", endymed_e2:"Рубцы и растяжки", endymed_e3:"Постакне", endymed_e4:"Пигментация",
+    endymed_mn_extra:"Реабилитация: 3–7 дней · 2–3 процедуры · Эффект до 2 лет",
+    endymed_fsr_desc:"Лёгкая шлифовка и RF-лифтинг одновременно — кожа становится более сияющей, ровной и плотной. Короче период реабилитации по сравнению с лазером. Идеально для постакне и выравнивания тона.",
+    fsr_e1:"Пигментация", fsr_e2:"Расширенные поры", fsr_e3:"Постакне", fsr_e4:"Морщины", fsr_e5:"Второй подбородок", fsr_e6:"Сияние кожи",
+    fsr_extra:"Мгновенный результат · Короткая реабилитация · Без побочных эффектов",
+    endyeye_desc:"Безоперационная альтернатива блефаропластике. Три технологии Endymed в одном протоколе — подтягивают кожу века, уменьшают отёки и разглаживают гусиные лапки без вмешательства и периода восстановления.",
+    endyeye_e1:"Лифтинг век", endyeye_e2:"Мешки под глазами", endyeye_e3:"Гусиные лапки", endyeye_e4:"Плотность кожи",
+    endyeye_extra:"RF-лифтинг · RF-микронидлинг · Фракционное обновление",
+    endo_desc:"Технология компрессионной микровибрации, разработанная совместно с флебологом. Воздействует не только на кожу, но и на циркуляцию в тканях — снижает тяжесть в ногах, уменьшает отёки. Работает и для лица: лифтинг овала, тонус и свежий вид.",
+    endo_e1:"Уменьшение отёков", endo_e2:"Лимфодренаж", endo_e3:"Гладкая кожа", endo_e4:"Целлюлит", endo_e5:"Микроциркуляция",
+    endo_course:"Без периода восстановления · Результат виден после 1-й процедуры · Курс: 6–12 процедур",
+    endo_face_title:"Endospheres для лица — лифтинг овала и тон кожи",
+    endo_f1:"Уменьшение отёков", endo_f2:"Микроциркуляция", endo_f3:"Тон и плотность кожи", endo_f4:"Овал лица", endo_f5:"Свежий вид",
+    geneo_desc:"Процедура 3-в-1, которая одновременно очищает, насыщает кожу кислородом и стимулирует выработку коллагена. Видимый результат уже после первого сеанса — сияние, свежесть и подтянутая кожа без агрессивного воздействия.",
+    geneo_e1:"OxyGeneo — кислородная терапия", geneo_e2:"RF-лифтинг", geneo_e3:"Ультразвук", geneo_e4:"Glow-эффект", geneo_e5:"Пигментация и акне",
+    geneo_extra:"Капсулы на выбор: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome",
+    tripollar_desc:"Классический RF-лифтинг — мягко, без повреждения кожи. Прогревает ткани, стимулирует коллаген и даёт видимое подтягивание уже после первой процедуры. Отличный выбор как регулярная поддерживающая процедура.",
+    tripollar_e1:"Подтяжка кожи", tripollar_e2:"Морщины", tripollar_e3:"Овал лица", tripollar_e4:"Лёгкий липолиз", tripollar_e5:"Тонус кожи",
+    tripollar_extra:"Эффект после 1-й процедуры · Курс — длительный результат · Для регулярного ухода",
+    laser_desc:"Современный диодный лазер для долгосрочного удаления волос. Система охлаждения обеспечивает минимальный дискомфорт. Подходит для всех типов кожи — лица и тела.",
+    laser_e1:"Длительная эпиляция", laser_e2:"Гладкая кожа", laser_e3:"Все типы кожи", laser_e4:"Минимальный дискомфорт",
+    laser_extra:"Курс: 6–12 процедур · Лицо и тело",
+    why_label:"Наши преимущества", why_title:"Почему <em>выбирают</em> нас",
+    why_sub:"Мы не просто делаем процедуры — мы выстраиваем систему долгосрочного ухода для каждой клиентки.",
+    why1_title:"Индивидуальный подход", why1_desc:"Каждый протокол составляется персонально — под состояние кожи и ваши цели.",
+    why2_title:"Сертифицированное оборудование", why2_desc:"Только оригинальные аппараты с клинически доказанной эффективностью и FDA-сертификатами.",
+    why3_title:"Комплексные решения", why3_desc:"Комбинируем технологии для максимального и долгосрочного результата.",
+    why4_title:"Медицинская компетентность", why4_desc:"Специалисты с медицинским образованием и постоянным повышением квалификации.",
+    why5_title:"Честность", why5_desc:"Чётко объясняем, что даст процедура — без преувеличенных обещаний.",
+    why6_title:"Комфорт и забота", why6_desc:"От первого звонка до результата — одинаковое внимание на каждом этапе.",
+    ba_label:"Результаты", ba_title:"До и <em>после</em>", ba_sub:"Реальные результаты наших клиенток.",
+    ba_before:"До", ba_after:"После", ba_sessions3:"3 процедуры", ba_sessions10:"10 процедур", ba_sessions8:"8 процедур",
+    video_label:"Процедуры", video_title:"Смотрите <em>процедуры</em>", video_sub:"Взгляд на нашу повседневную работу.",
+    reviews_label:"Отзывы", reviews_title:"Что говорят <em>клиентки</em>",
+    review1_text:"Очень всё понравилось 🤗 Хочу записаться на курс эндосферы на 10 процедур 🤗",
+    review1_proc:"Endospheres",
+    review2_text:"Отзыв после 5-й процедуры эндосферы. Ноги очень заметно подтянулись, видны мышцы, кожа приобрела тонус, и животик стал меньше — никак не могла от него избавиться. Что-то невероятное 💪 Спасибо за чудесный опыт! ❤️",
+    review2_proc:"Endospheres",
+    review3_text:"Так хорошо себя чувствую после эндосферы — как будто вода сошла, даже как после тренировки ❤️❤️❤️",
+    review3_proc:"Endospheres",
+    review4_text:"Посмотрела на себя в зеркало. Морщинки стали меньше, кожа чувствуется в тонусе. Спасибо за такой превосходный подарок 💋",
+    review4_proc:"Процедура лица",
+    review5_text:"Процедура лица супер — лицо стало глаже и чувствуется лифтинг 👍 Обязательно сделаю ещё ❤️",
+    review5_proc:"Процедура лица",
+    review6_text:"Хочу поблагодарить мастера за заботу. Эндосфера сделана очень профессионально, массаж лица — просто фантастический. Столько внимания в каждом движении ❤️",
+    review6_proc:"Endospheres + массаж лица",
+    book_label:"Запись", book_title:"Начните свой <em>путь</em><br>к красоте",
+    book_sub:"Оставьте контакты — мы свяжемся и договоримся об удобном времени.",
+    book_phone_ph:"+371 __ __ ____", book_btn:"Записаться",
+    form_name_label:"Имя", form_name_ph:"Ваше имя",
+    form_phone_label:"Телефон",
+    form_email_label:"Email", form_optional:"(необязательно)", form_email_ph:"ваш@email.com",
+    form_service_label:"Процедура", form_service_default:"— Выберите процедуру —", form_consult_opt:"Консультация",
+    form_note:"Мы свяжемся с вами в течение 24 часов",
+    form_success_msg:"Спасибо! Скоро будем на связи.",
+    alteg_label:"Онлайн-запись", alteg_title:"Выберите удобное время",
+    alteg_desc:"Запишитесь онлайн — выберите процедуру и время. Доступно 24/7.",
+    alteg_ph_title:"Календарь Alteg.io", alteg_ph_sub:"Здесь будет интегрирован виджет онлайн-записи",
+    team_label:"Наша команда", team_title:"Люди за <em>Solvata</em>",
+    team_sub:"Специалисты с медицинским образованием, которые постоянно совершенствуют знания и искренне заботятся о результате каждой клиентки.",
+    team1_name:"Диана Ручевская", team1_role:"Директор и основатель", team1_quote:"«Основатель Solvata Beauty. Пять лет развивает аппаратную косметологию в Латвии — с убеждением, что каждая женщина заслуживает профессионального подхода и настоящего результата.»",
+    team2_name:"Элина Велесова", team2_role:"Специалист по косметологии", team2_quote:"«Мед. колледж им. Страдиня · Эксперт по RF-технологиям · Постоянное повышение квалификации»",
+    nav_services:"Услуги", equip_subpage_btn:"Все процедуры и подробное описание →",
+    price_btn_zionic:"Цены", price_btn_endymed:"Цены", price_btn_fsr:"Цены",
+    price_btn_endyeye:"Цены", price_btn_endospheres:"Цены", price_btn_geneo:"Цены",
+    price_btn_tripollar:"Цены", price_btn_laser:"Цены",
+    endo_first_session:"1-й сеанс — 35€", endo_first_session_full:"Первый сеанс",
+    modal_body_label:"Процедуры для тела", modal_face_label:"Процедуры для лица",
+    modal_face_body_label:"Лицо и тело", modal_laser_label:"Лазерная эпиляция",
+    modal_face:"Лицо", modal_body:"Тело", modal_combos:"Комплексы",
+    modal_device_endymed:"Аппарат Endymed", modal_device_fsr:"Аппарат Endymed FSR",
+    modal_device_pollogen:"Аппарат Pollogen",
+    z_intro:"Ознакомительная процедура (2 зоны)",
+    z_trap:"Зона трапеций",
+    z_lymph:"Лимфодренаж тела с RF",
+    z_back:"Вся спина",
+    z_2zones:"Две небольшие зоны нижней части тела",
+    z_arms:"Руки",
+    z_arms6:"Руки, абонемент x6",
+    z_arms10:"Руки, абонемент x10",
+    z_belly:"Живот и бока",
+    z_belly6:"Живот и бока, абонемент x6",
+    z_belly10:"Живот и бока, абонемент x10",
+    z_legs_front:"Передняя часть ног",
+    z_legs_front6:"Передняя часть ног, абонемент x6",
+    z_legs_full:"Полностью ноги",
+    z_legs_full6:"Полностью ноги, абонемент x6",
+    z_legs_full10:"Полностью ноги, абонемент x10",
+    z_c1:"Ноги + ягодицы",
+    z_c1_6:"Ноги + ягодицы, абонемент x6",
+    z_c2:"Ноги + живот",
+    z_c2_6:"Ноги + живот, абонемент x6",
+    z_c3:"Ноги + ягодицы + живот",
+    z_c3_6:"Ноги + ягодицы + живот, абонемент x6",
+    mn_eye:"RF-микронидлинг зоны глаз (3 процедуры)",
+    mn_face:"RF-микронидлинг лица",
+    mn_face_neck:"RF-микронидлинг лица и шеи",
+    mn_face_neck_dec:"RF-микронидлинг лица, шеи и декольте",
+    mn_belly:"RF-микронидлинг живота",
+    fsr_eye_zone:"Фракционная RF-шлифовка зоны глаз",
+    fsr_face_p:"Фракционная RF-шлифовка лица",
+    fsr_face_neck_p:"Фракционная RF-шлифовка лица и шеи",
+    fsr_face_neck_dec_p:"Фракционная RF-шлифовка лица, шеи и декольте",
+    fsr_scars_p:"Фракционная RF-шлифовка рубцов (любая зона)",
+    eye_tp_eye:"TriPollar RF-лифтинг зоны глаз",
+    eye_tp_eye5:"TriPollar RF-лифтинг зоны глаз x5 (абонемент)",
+    es_face:"Эндосфера лица",
+    es_face_care:"Эндосфера лица (+ уход и маска)",
+    es_face_dec:"Эндосфера лица и зоны декольте",
+    es_face_dec_care:"Эндосфера лица и декольте (+ уход и маска)",
+    es_face6:"Абонемент x6",
+    es_face10:"Абонемент x10",
+    es_body_intro1:"Ознакомительная процедура (1 проблемная зона)",
+    es_body_intro2:"Ознакомительная процедура (всё тело)",
+    es_body_zone:"Эндосфера на проблемную зону",
+    es_body_full:"Эндосфера на всё тело",
+    es_body_zone6:"Абонемент x6 (проблемная зона)",
+    es_body_zone10:"Абонемент x10 (проблемная зона)",
+    es_body_full6:"Абонемент x6 (всё тело)",
+    es_body_full10:"Абонемент x10 (всё тело)",
+    geo_face:"GeneO для лица",
+    geo_face_hands:"GeneO для лица и массаж рук",
+    geo_face_dec:"GeneO для лица и декольте",
+    geo_face_dec_hands:"GeneO для лица, декольте и рук",
+    geo_back:"GeneO для спины",
+    tp_eye:"TriPollar RF-лифтинг зоны глаз",
+    tp_eye5:"TriPollar RF-лифтинг зоны глаз x5 (абонемент)",
+    tp_face:"TriPollar RF-лифтинг",
+    tp_face5:"TriPollar RF-лифтинг x5 (абонемент)",
+    las_face:"Лицо",
+    las_lip:"Верхняя губа",
+    las_chin:"Подбородок",
+    las_brow:"Межбровная зона",
+    las_bikini_cl:"Классическое бикини",
+    las_bikini_deep:"Глубокое бикини",
+    las_bikini_glut:"Глубокое бикини + зона ягодиц",
+    las_armpits:"Подмышки",
+    las_belly_line:"Белая линия живота",
+    las_nipples:"Соски (ореолы)",
+    las_arms_half:"Руки до локтя",
+    las_arms_full:"Руки полностью",
+    las_legs_half:"Ноги до колена",
+    las_legs_full:"Ноги полностью",
+    las_back:"Спина",
+    las_chest:"Грудь (передняя часть)",
+    las_c1:"Подмышки + глубокое бикини",
+    las_c2:"Ноги до колена + глубокое бикини",
+    las_c3:"Ноги полностью + подмышки",
+    las_c4:"Ноги полностью + глубокое бикини",
+    las_c5:"Ноги полностью + глубокое бикини + подмышки",
+    modal_laser_label:"Лазерная эпиляция",
+    footer_desc:"Аппаратная косметология в Риге с premium оборудованием и индивидуальным подходом к каждой клиентке.",
+    footer_services:"Процедуры", footer_contact:"Контакты", footer_rights:"Все права защищены."
+  },
+
+  en: {
+    nav_mission:"Mission", nav_equipment:"Treatments", nav_why:"About", nav_team:"Team", nav_reviews:"Reviews", nav_book:"Book Now",
+    hero_label:"Medical Aesthetics · Riga",
+    hero_title:"Natural <em>beauty</em><br>and lasting youth",
+    hero_subtitle:"Evidence-based aesthetic technology, applied with care — to support your skin health and help you feel confident in your own skin.",
+    hero_cta:"Book a procedure", hero_cta2:"Our technologies",
+    hero_stat1:"Premium devices", hero_stat2:"Years of experience", hero_stat3:"Endospheres — 1st session",
+    mission_label:"Our mission",
+    mission_title:"Skin health is <em>our</em> priority",
+    mission_quote:"We believe beauty is the result of healthy, well-cared-for skin — not a mask. Every procedure we choose is backed by science and delivered with responsibility.",
+    mission_text:"We work exclusively with original premium devices that have undergone clinical trials and hold valid certificates. Every client receives an individual protocol and honest results.",
+    badge_certified:"Clinically tested", badge_original:"Original equipment", badge_individual:"Individual approach", badge_medical:"Medical education",
+    equip_label:"Our equipment",
+    equip_title:"Technologies and <em>devices</em>",
+    equip_sub:"Premium-class devices with clinically proven effectiveness — chosen with the highest responsibility for every client's safety and results.",
+    zionic_desc:"A unique combination: deep rotational massage + resistive radiofrequency in one session. Tissues are worked deeper, and the effect — firmer, smoother skin — appears after the very first sessions. Feels like a warm massage.",
+    zionic_e1:"Cellulite reduction", zionic_e2:"Skin firming", zionic_e3:"Body contouring", zionic_e4:"Lymphatic drainage", zionic_e5:"Fast visible effect", zionic_e6:"Skin quality",
+    endymed_mn_desc:"The procedure renews skin from within — activating new collagen and elastin production. Skin becomes denser, smoother and younger-looking without surgery. Effect builds over 2–3 months.",
+    endymed_e1:"Lifting & tightening", endymed_e2:"Scars & stretch marks", endymed_e3:"Post-acne treatment", endymed_e4:"Pigmentation",
+    endymed_mn_extra:"Recovery: 3–7 days · 2–3 sessions · Effect up to 2 years",
+    endymed_fsr_desc:"Light skin resurfacing and RF lifting simultaneously — skin becomes more radiant, even and dense. Shorter downtime than laser treatments. Ideal for post-acne correction and skin tone evening.",
+    fsr_e1:"Pigmentation", fsr_e2:"Enlarged pores", fsr_e3:"Post-acne scars", fsr_e4:"Wrinkles", fsr_e5:"Double chin", fsr_e6:"Skin radiance",
+    fsr_extra:"Immediate result · Short downtime · No side effects",
+    endyeye_desc:"A non-surgical alternative to blepharoplasty. Three Endymed technologies in one protocol — tighten eyelid skin, reduce puffiness and smooth crow's feet without intervention or recovery period.",
+    endyeye_e1:"Eyelid lift", endyeye_e2:"Under-eye bags", endyeye_e3:"Crow's feet", endyeye_e4:"Skin density",
+    endyeye_extra:"RF lifting · RF microneedling · Fractional renewal",
+    endo_desc:"Compression micro-vibration technology co-developed with a phlebologist. Acts on skin and fluid circulation alike — reducing leg heaviness, swelling and strengthening skin. Also works on the face: oval lifting, skin tone and fresher appearance.",
+    endo_e1:"Edema reduction", endo_e2:"Lymph drainage", endo_e3:"Smoother skin", endo_e4:"Cellulite", endo_e5:"Microcirculation",
+    endo_course:"No recovery period · Results visible after 1st session · Course: 6–12 sessions",
+    endo_face_title:"Endospheres for the face — oval lifting and skin tone",
+    endo_f1:"Edema reduction", endo_f2:"Microcirculation", endo_f3:"Skin tone & density", endo_f4:"Facial oval", endo_f5:"Fresh appearance",
+    geneo_desc:"A 3-in-1 procedure that simultaneously cleanses, oxygenates and stimulates collagen production. Visible result after the very first session — glow, freshness and lifted skin without aggressive impact.",
+    geneo_e1:"OxyGeneo oxygenation", geneo_e2:"RF lifting", geneo_e3:"Ultrasound", geneo_e4:"Glow effect", geneo_e5:"Pigmentation & acne",
+    geneo_extra:"Capsules available: Illuminate · Hydrate · Revive · Detox · Balance · Glam · Exosome",
+    tripollar_desc:"Classic RF lifting — gentle, non-ablative. Heats the tissue, stimulates collagen and delivers visible skin tightening after the very first session. Perfect as a regular maintenance procedure.",
+    tripollar_e1:"Skin tightening", tripollar_e2:"Wrinkles", tripollar_e3:"Facial oval", tripollar_e4:"Mild lipolysis", tripollar_e5:"Skin tone",
+    tripollar_extra:"Effect after 1st session · Course for lasting results · Ideal for regular care",
+    laser_desc:"Modern diode laser for long-lasting hair removal. Built-in cooling system for minimal discomfort. Suitable for all skin types — face and body.",
+    laser_e1:"Long-lasting epilation", laser_e2:"Smooth skin", laser_e3:"All skin types", laser_e4:"Minimal discomfort",
+    laser_extra:"Course: 6–12 sessions · Face & body",
+    why_label:"Why us", why_title:"Why <em>choose</em> Solvata",
+    why_sub:"We don't just perform procedures — we build a long-term care system tailored to each client.",
+    why1_title:"Individual approach", why1_desc:"Each protocol is created personally — based on your skin condition and goals.",
+    why2_title:"Certified equipment", why2_desc:"Only original devices with clinically proven effectiveness and FDA certification.",
+    why3_title:"Comprehensive solutions", why3_desc:"We combine technologies for maximum, long-lasting results.",
+    why4_title:"Medical expertise", why4_desc:"Specialists with medical education and continuous professional development.",
+    why5_title:"Honesty", why5_desc:"We clearly explain what a procedure will deliver — no exaggerated promises.",
+    why6_title:"Comfort & care", why6_desc:"From the first call to the final result — the same level of attention throughout.",
+    ba_label:"Results", ba_title:"Before and <em>after</em>", ba_sub:"Real results from our clients.",
+    ba_before:"Before", ba_after:"After", ba_sessions3:"3 sessions", ba_sessions10:"10 sessions", ba_sessions8:"8 sessions",
+    video_label:"Procedures", video_title:"See the <em>procedures</em>", video_sub:"A look at our everyday work.",
+    reviews_label:"Reviews", reviews_title:"What <em>clients</em> say",
+    review1_text:"Loved everything so much 🤗 Want to book the endospheres course — 10 sessions 🤗",
+    review1_proc:"Endospheres",
+    review2_text:"My review after the 5th endospheres session. Legs noticeably toned up, muscles visible, previously saggy skin gained tone, and the tummy pouch got smaller — couldn't get rid of it before. Something incredible 💪 Thank you for this experience! ❤️",
+    review2_proc:"Endospheres",
+    review3_text:"I feel so good after endospheres — like water drained away, even like after a workout ❤️❤️❤️",
+    review3_proc:"Endospheres",
+    review4_text:"Looked at myself in the mirror. Wrinkles are smaller, skin feels toned. Thank you for such a wonderful gift 💋",
+    review4_proc:"Facial procedure",
+    review5_text:"The facial procedure is super — face became smoother and I can feel the lift 👍 Definitely doing it again ❤️",
+    review5_proc:"Facial procedure",
+    review6_text:"Want to thank the specialist who did my procedure. The endospheres was done very professionally and the facial massage was simply fantastic — so much care in every movement ❤️",
+    review6_proc:"Endospheres + facial massage",
+    book_label:"Booking", book_title:"Begin your <em>journey</em><br>to beauty",
+    book_sub:"Leave your contact details — we'll reach out and arrange a time that suits you.",
+    book_phone_ph:"+371 __ __ ____", book_btn:"Book now",
+    form_name_label:"Name", form_name_ph:"Your name",
+    form_phone_label:"Phone",
+    form_email_label:"Email", form_optional:"(optional)", form_email_ph:"your@email.com",
+    form_service_label:"Procedure", form_service_default:"— Select a procedure —", form_consult_opt:"Consultation",
+    form_note:"We will contact you within 24 hours",
+    form_success_msg:"Thank you! We'll be in touch shortly.",
+    alteg_label:"Online booking", alteg_title:"Choose a convenient time",
+    alteg_desc:"Book online — choose your procedure and time. Available 24/7.",
+    alteg_ph_title:"Alteg.io calendar", alteg_ph_sub:"Online booking widget will be integrated here",
+    team_label:"Our team", team_title:"The people behind <em>Solvata</em>",
+    team_sub:"Specialists with medical education who continuously develop their expertise and genuinely care about every client's results.",
+    team1_name:"Diana Ručevska", team1_role:"Founder & Director", team1_quote:"«Founder of Solvata Beauty. Five years developing medical aesthetics in Latvia — with a firm belief that every woman deserves a professional approach and real, lasting results.»",
+    team2_name:"Elīna Veļesova", team2_role:"Aesthetic specialist", team2_quote:"«P. Stradiņš Medical College · RF technology expert · Continuous professional development»",
+    nav_services:"Services", equip_subpage_btn:"All treatments & detailed overview →",
+    price_btn_zionic:"Prices", price_btn_endymed:"Prices", price_btn_fsr:"Prices",
+    price_btn_endyeye:"Prices", price_btn_endospheres:"Prices", price_btn_geneo:"Prices",
+    price_btn_tripollar:"Prices", price_btn_laser:"Prices",
+    endo_first_session:"1st session — 35€", endo_first_session_full:"First session",
+    modal_body_label:"Body procedures", modal_face_label:"Face procedures",
+    modal_face_body_label:"Face & body", modal_laser_label:"Laser hair removal",
+    modal_face:"Face", modal_body:"Body", modal_combos:"Packages",
+    modal_device_endymed:"Endymed device", modal_device_fsr:"Endymed FSR device",
+    modal_device_pollogen:"Pollogen device",
+    z_intro:"Introductory session (2 zones)",
+    z_trap:"Trapezius zone",
+    z_lymph:"Body lymph drainage with RF",
+    z_back:"Whole back",
+    z_2zones:"Two small zones (lower body)",
+    z_arms:"Arms",
+    z_arms6:"Arms, subscription x6",
+    z_arms10:"Arms, subscription x10",
+    z_belly:"Abdomen & sides",
+    z_belly6:"Abdomen & sides, subscription x6",
+    z_belly10:"Abdomen & sides, subscription x10",
+    z_legs_front:"Front of legs",
+    z_legs_front6:"Front of legs, subscription x6",
+    z_legs_full:"Full legs",
+    z_legs_full6:"Full legs, subscription x6",
+    z_legs_full10:"Full legs, subscription x10",
+    z_c1:"Legs + glutes",
+    z_c1_6:"Legs + glutes, subscription x6",
+    z_c2:"Legs + abdomen",
+    z_c2_6:"Legs + abdomen, subscription x6",
+    z_c3:"Legs + glutes + abdomen",
+    z_c3_6:"Legs + glutes + abdomen, subscription x6",
+    mn_eye:"RF microneedling — eye zone (3 sessions)",
+    mn_face:"RF microneedling — face",
+    mn_face_neck:"RF microneedling — face & neck",
+    mn_face_neck_dec:"RF microneedling — face, neck & décolleté",
+    mn_belly:"RF microneedling — abdomen",
+    fsr_eye_zone:"Fractional RF resurfacing — eye zone",
+    fsr_face_p:"Fractional RF resurfacing — face",
+    fsr_face_neck_p:"Fractional RF resurfacing — face & neck",
+    fsr_face_neck_dec_p:"Fractional RF resurfacing — face, neck & décolleté",
+    fsr_scars_p:"Fractional RF resurfacing — scars (any zone)",
+    eye_tp_eye:"TriPollar RF lifting — eye zone",
+    eye_tp_eye5:"TriPollar RF lifting — eye zone x5 (subscription)",
+    es_face:"Endospheres — face",
+    es_face_care:"Endospheres — face (+ care & mask)",
+    es_face_dec:"Endospheres — face & décolleté",
+    es_face_dec_care:"Endospheres — face & décolleté (+ care & mask)",
+    es_face6:"Subscription x6",
+    es_face10:"Subscription x10",
+    es_body_intro1:"Introductory session (1 problem zone)",
+    es_body_intro2:"Introductory session (full body)",
+    es_body_zone:"Endospheres — problem zone",
+    es_body_full:"Endospheres — full body",
+    es_body_zone6:"Subscription x6 (problem zone)",
+    es_body_zone10:"Subscription x10 (problem zone)",
+    es_body_full6:"Subscription x6 (full body)",
+    es_body_full10:"Subscription x10 (full body)",
+    geo_face:"GeneO — face",
+    geo_face_hands:"GeneO — face + hand massage",
+    geo_face_dec:"GeneO — face & décolleté",
+    geo_face_dec_hands:"GeneO — face, décolleté & hands",
+    geo_back:"GeneO — back",
+    tp_eye:"TriPollar RF lifting — eye zone",
+    tp_eye5:"TriPollar RF lifting — eye zone x5 (subscription)",
+    tp_face:"TriPollar RF lifting",
+    tp_face5:"TriPollar RF lifting x5 (subscription)",
+    las_face:"Face",
+    las_lip:"Upper lip",
+    las_chin:"Chin",
+    las_brow:"Between eyebrows",
+    las_bikini_cl:"Classic bikini",
+    las_bikini_deep:"Deep bikini",
+    las_bikini_glut:"Deep bikini + glutes",
+    las_armpits:"Armpits",
+    las_belly_line:"Abdominal midline",
+    las_nipples:"Nipples (areolas)",
+    las_arms_half:"Arms to elbow",
+    las_arms_full:"Full arms",
+    las_legs_half:"Legs to knee",
+    las_legs_full:"Full legs",
+    las_back:"Back",
+    las_chest:"Chest (front)",
+    las_c1:"Armpits + deep bikini",
+    las_c2:"Legs to knee + deep bikini",
+    las_c3:"Full legs + armpits",
+    las_c4:"Full legs + deep bikini",
+    las_c5:"Full legs + deep bikini + armpits",
+    modal_laser_label:"Laser hair removal",
+    footer_desc:"Medical-grade aesthetic treatments in Riga — premium devices and a truly individual approach.",
+    footer_services:"Treatments", footer_contact:"Contact", footer_rights:"All rights reserved."
+  }
+};
+
+let currentLang = 'lv';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.toLowerCase() === lang));
+  const t = translations[lang];
+  if (!t) return;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.dataset.i18nPh;
+    if (t[key]) el.placeholder = t[key];
+  });
+  document.documentElement.lang = lang;
+  // update hero stat counter shimmer stays, update video label if needed
+}
+
+// init on load
+setLang('lv');
+</script>
+</body>
+</html>

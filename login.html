@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solvata Beauty — Pierakstīties</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #410022;
+    --accent-light: #6b0038;
+    --accent-pale: rgba(65,0,34,0.08);
+    --off-white: #faf8f7;
+    --text: #1a1015;
+    --text-muted: #7a6670;
+    --glass-bg: rgba(255,255,255,0.8);
+    --glass-border: rgba(255,255,255,0.6);
+    --glass-shadow: 0 24px 80px rgba(65,0,34,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    background: var(--off-white);
+    color: var(--text);
+    overflow: hidden;
+  }
+
+  /* Background */
+  .bg {
+    position: fixed; inset: 0;
+    background: linear-gradient(135deg, #fdf5f8 0%, #faf0f4 40%, #f2e8ef 100%);
+    z-index: 0;
+  }
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+  .orb-1 {
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(65,0,34,0.10) 0%, transparent 70%);
+    top: -20%; right: -15%;
+    animation: driftA 12s ease-in-out infinite alternate;
+  }
+  .orb-2 {
+    width: 40vw; height: 40vw;
+    background: radial-gradient(circle, rgba(65,0,34,0.06) 0%, transparent 70%);
+    bottom: -10%; left: -10%;
+    animation: driftB 14s ease-in-out infinite alternate;
+  }
+  @keyframes driftA {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(-3%, 4%); }
+  }
+  @keyframes driftB {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(3%, -3%); }
+  }
+
+  /* Center layout */
+  .page {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 0;
+  }
+
+  /* Card */
+  .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 28px;
+    box-shadow: var(--glass-shadow);
+    padding: 52px 48px 44px;
+    width: 100%;
+    max-width: 420px;
+    animation: cardIn 0.8s cubic-bezier(0.16,1,0.3,1) both;
+  }
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(24px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Logo area */
+  .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .brand-logo {
+    width: 60px; height: 60px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(65,0,34,0.14);
+  }
+  .brand-logo img { width: 100%; height: 100%; object-fit: contain; }
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+  .brand-name span { font-style: italic; font-weight: 300; }
+  .brand-tagline {
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* Form */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+  }
+  .form-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .form-input {
+    background: white;
+    border: 1.5px solid rgba(65,0,34,0.13);
+    border-radius: 12px;
+    padding: 13px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    width: 100%;
+  }
+  .form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(65,0,34,0.07);
+  }
+  .form-input.error {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192,57,43,0.08);
+    animation: shake 0.35s ease;
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-6px); }
+    60%       { transform: translateX(5px); }
+    80%       { transform: translateX(-3px); }
+  }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.3s, transform 0.2s, opacity 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-submit:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .btn-submit:active { transform: translateY(0); }
+  .btn-submit.loading { opacity: 0.7; pointer-events: none; }
+
+  /* Spinner inside button */
+  .btn-submit .spinner {
+    display: none;
+    width: 16px; height: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn-submit.loading .spinner { display: block; }
+  .btn-submit.loading .btn-text { opacity: 0; }
+  @keyframes spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+  /* Error message */
+  .error-msg {
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #c0392b;
+    animation: fadeIn 0.3s ease;
+  }
+  .error-msg.show { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1.75rem 0 1.25rem;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(65,0,34,0.1);
+  }
+  .divider-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* Contact links */
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(65,0,34,0.08);
+    background: rgba(65,0,34,0.02);
+    transition: all 0.25s;
+  }
+  .contact-link:hover {
+    color: var(--accent);
+    border-color: rgba(65,0,34,0.2);
+    background: var(--accent-pale);
+    transform: translateX(3px);
+  }
+  .contact-icon {
+    width: 34px; height: 34px;
+    background: var(--accent-pale);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 1rem;
+    transition: background 0.25s;
+  }
+  .contact-link:hover .contact-icon { background: rgba(65,0,34,0.14); }
+  .contact-text-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    display: block;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .contact-text-value {
+    font-size: 0.875rem;
+    color: var(--text);
+    display: block;
+    line-height: 1.2;
+  }
+
+  /* Footer note */
+  .page-footer {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    color: rgba(65,0,34,0.3);
+    letter-spacing: 0.08em;
+    text-align: center;
+    animation: cardIn 0.8s 0.2s cubic-bezier(0.16,1,0.3,1) both;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 36px 24px 32px; }
+    .brand-name { font-size: 1.45rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+</div>
+
+<div class="page">
+  <div class="card">
+
+    <!-- Brand -->
+    <div class="brand">
+      <div class="brand-logo">
+        <img src="https://ik.imagekit.io/erewhile/Solvata/logo%20solvata%20beauty.png?updatedAt=1777383555772" alt="Solvata Beauty">
+      </div>
+      <div class="brand-name">Solvata <span>Beauty</span></div>
+      <div class="brand-tagline">Aparatūras kosmetoloģija · Rīga</div>
+    </div>
+
+    <!-- Login form -->
+    <div id="login-section">
+      <div class="form-group">
+        <label class="form-label" for="username">Lietotājvārds</label>
+        <input type="text" id="username" class="form-input" placeholder="Ievadiet lietotājvārdu" autocomplete="username" autocapitalize="none">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="password">Parole</label>
+        <input type="password" id="password" class="form-input" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <button class="btn-submit" id="btn-login" onclick="doLogin()">
+        <span class="btn-text">Ienākt</span>
+        <span class="spinner"></span>
+      </button>
+      <div class="error-msg" id="error-msg">
+        Nepareizs lietotājvārds vai parole
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider">
+      <span class="divider-text">Sazināties ar mums</span>
+    </div>
+
+    <!-- Contact links -->
+    <div class="contacts">
+      <a href="https://www.instagram.com/solvatabeauty/" target="_blank" class="contact-link">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <span class="contact-text-label">Instagram</span>
+          <span class="contact-text-value">@solvatabeauty</span>
+        </div>
+      </a>
+      <a href="tel:+37100000000" class="contact-link">
+        <div class="contact-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="contact-text-label">Telefons</span>
+          <span class="contact-text-value">+371 00 000 000</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="page-footer">© 2026 Solvata Beauty · Rīga, Latvija</div>
+</div>
+
+<script>
+  // Credentials — JS-side only, not server-protected
+  const VALID_USER = 'Diana';
+  const VALID_PASS = '289381';
+  const SESSION_KEY = 'sb_auth';
+  const REDIRECT_TO = 'index.html'; // Change to your main page filename
+
+  // If already authenticated, redirect immediately
+  if (sessionStorage.getItem(SESSION_KEY) === 'ok') {
+    window.location.replace(REDIRECT_TO);
+  }
+
+  // Enter key support
+  document.getElementById('username').addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('password').focus(); });
+  document.getElementById('password').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
+  function doLogin() {
+    const user = document.getElementById('username').value.trim();
+    const pass = document.getElementById('password').value;
+    const btn  = document.getElementById('btn-login');
+    const err  = document.getElementById('error-msg');
+    const uInp = document.getElementById('username');
+    const pInp = document.getElementById('password');
+
+    // Show loading
+    btn.classList.add('loading');
+    err.classList.remove('show');
+    uInp.classList.remove('error');
+    pInp.classList.remove('error');
+
+    // Simulate tiny delay so it feels real
+    setTimeout(() => {
+      if (user === VALID_USER && pass === VALID_PASS) {
+        sessionStorage.setItem(SESSION_KEY, 'ok');
+        // Fade out before redirect
+        document.querySelector('.page').style.transition = 'opacity 0.4s ease';
+        document.querySelector('.page').style.opacity = '0';
+        setTimeout(() => window.location.replace(REDIRECT_TO), 420);
+      } else {
+        btn.classList.remove('loading');
+        err.classList.add('show');
+        pInp.value = '';
+        // Shake both inputs
+        uInp.classList.add('error');
+        pInp.classList.add('error');
+        setTimeout(() => { uInp.classList.remove('error'); pInp.classList.remove('error'); }, 500);
+        pInp.focus();
+      }
+    }, 600);
+  }
+</script>
+</body>
+</html>

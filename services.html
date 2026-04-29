@@ -379,6 +379,10 @@ footer{background:var(--text);color:rgba(255,255,255,0.6);padding:60px 5vw 40px;
 </head>
 <body>
 
+<script>
+(function(){if(sessionStorage.getItem('sb_auth')!=='ok'){window.location.replace('login.html');}})();
+</script>
+  
 <div class="progress-bar" id="progress"></div>
 
 <!-- ─── CONTRA MODAL ─────────────────────────────────── -->

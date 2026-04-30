@@ -27,8 +27,8 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Jost',sans-serif;font-weight:300;background:var(--off-white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--off-white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;max-width:100vw}
 
 :target{scroll-margin-top:130px}
 
@@ -90,7 +90,7 @@ nav{
 .snav-item:hover,.snav-item.active{color:var(--accent);border-bottom-color:var(--accent)}
 
 /* ─── SECTION BASE ───────────────────────────────────── */
-.service-section{padding:100px 5vw;position:relative;scroll-margin-top:130px}
+.service-section{padding:100px 5vw;position:relative;scroll-margin-top:130px;overflow:hidden}
 .service-section:nth-child(odd){background:var(--off-white)}
 .service-section:nth-child(even){background:linear-gradient(180deg,#f8f2f5 0%,var(--off-white) 100%)}
 .service-inner{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;max-width:1280px;margin:0 auto}
@@ -226,6 +226,26 @@ nav{
   .steps li{font-size:0.82rem}
   .aftercare-items li{font-size:0.78rem}
   .spec-val{font-size:1.2rem}
+  /* Hide brand text, keep logo only */
+  .nav-logo{display:none}
+  /* Compact nav padding */
+  nav{padding:12px 4vw;gap:0.5rem}
+  /* Shrink back button */
+  .nav-back{padding:6px 12px;font-size:0.65rem;letter-spacing:0.06em}
+  .nav-back span{display:none}
+  /* Ensure lang buttons stay visible and don't overflow */
+  .lang-switcher{gap:0.2rem}
+  .lang-btn{padding:3px 6px;font-size:0.62rem;letter-spacing:0.05em}
+  /* Nav right stays compact */
+  .nav-right{gap:0.5rem;flex-shrink:0}
+  /* Logo image keeps fixed size */
+  .nav-logo-img{width:36px;height:36px;flex-shrink:0}
+}
+
+@media(max-width:380px){
+  nav{padding:10px 4vw}
+  .lang-btn{padding:3px 5px;font-size:0.6rem}
+  .nav-back{padding:5px 10px}
 }
 
 /* ─── CAPSULE GRID ───────────────────────────────────── */

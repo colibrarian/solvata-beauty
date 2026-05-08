@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privātuma politika — Solvata Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#410022;--accent-light:#6b0038;--accent-pale:rgba(65,0,34,0.08);--off-white:#faf8f7;--text:#1a1015;--text-muted:#7a6670;--radius:20px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--off-white);color:var(--text);-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,247,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(65,0,34,0.08)}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;letter-spacing:0.04em;color:var(--accent)}
+.nav-logo span{font-style:italic;font-weight:300}
+.nav-right{display:flex;align-items:center;gap:0.75rem}
+.lang-switcher{display:flex;gap:0.3rem}
+.lang-btn{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;background:none;border:1px solid transparent;padding:4px 8px;border-radius:20px;color:var(--text-muted);transition:all 0.3s;font-family:'Jost',sans-serif;cursor:pointer}
+.lang-btn.active,.lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+.nav-back{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid rgba(65,0,34,0.25);padding:7px 16px;border-radius:30px;transition:all 0.3s;display:flex;align-items:center;gap:6px}
+.nav-back:hover{background:var(--accent-pale)}
+
+.page-wrap{max-width:760px;margin:0 auto;padding:140px 5vw 100px}
+
+.page-eyebrow{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:block}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:300;line-height:1.1;margin-bottom:0.5rem}
+.page-title em{font-style:italic;color:var(--accent)}
+.page-date{font-size:0.78rem;color:var(--text-muted);margin-bottom:3rem;display:block}
+.page-divider{width:48px;height:1px;background:var(--accent);opacity:0.35;margin-bottom:3rem}
+
+.doc-section{margin-bottom:2.5rem}
+.doc-section h2{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--text);margin-bottom:0.75rem}
+.doc-section p{font-size:0.9rem;line-height:1.85;color:var(--text-muted);margin-bottom:0.75rem}
+.doc-section ul{list-style:none;margin:0.5rem 0 0.75rem}
+.doc-section ul li{font-size:0.9rem;line-height:1.8;color:var(--text-muted);padding-left:1.2rem;position:relative}
+.doc-section ul li::before{content:'—';position:absolute;left:0;color:var(--accent);opacity:0.5}
+.doc-section a{color:var(--accent);text-underline-offset:3px}
+
+.third-party-box{background:white;border:1px solid rgba(65,0,34,0.1);border-radius:14px;padding:20px 24px;margin:1rem 0}
+.third-party-box .name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--text);margin-bottom:4px}
+.third-party-box .desc{font-size:0.83rem;line-height:1.7;color:var(--text-muted)}
+.third-party-box a{color:var(--accent);font-size:0.8rem}
+
+footer{text-align:center;padding:32px 5vw;border-top:1px solid rgba(65,0,34,0.08);font-size:0.78rem;color:var(--text-muted)}
+footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="solvata-beauty-v2-3.html" class="nav-brand">
+    <span class="nav-logo">Solvata <span>Beauty</span></span>
+  </a>
+  <div class="nav-right">
+    <a href="solvata-beauty-v2-3.html" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 11L5 7l4-4"/></svg>
+      <span id="nav-back-txt">Atpakaļ</span>
+    </a>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('lv')">LV</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <span class="page-eyebrow" id="eyebrow">Juridiskā informācija</span>
+  <h1 class="page-title" id="title">Privātuma <em>politika</em></h1>
+  <span class="page-date" id="date">Spēkā no: 2026. gada 1. maija</span>
+  <div class="page-divider"></div>
+
+  <div id="doc-content"></div>
+</div>
+
+<footer>
+  <span>© 2026 Solvata Beauty. </span>
+  <a href="solvata-beauty-v2-3.html">solvatabeauty.lv</a>
+</footer>
+
+<script>
+const content = {
+  lv: {
+    eyebrow: 'Juridiskā informācija',
+    title: 'Privātuma <em>politika</em>',
+    date: 'Spēkā no: 2026. gada 1. maija',
+    back: 'Atpakaļ',
+    sections: [
+      {
+        h: 'Par mums',
+        p: 'Solvata Beauty ir aparatūras kosmetoloģijas studija Rīgā. Mēs apstrādājam personas datus atbildīgi un tikai tādā apjomā, kas nepieciešams pakalpojumu sniegšanai.'
+      },
+      {
+        h: 'Kādus datus mēs vācam',
+        p: 'Mēs vācam tikai tos datus, ko jūs brīvprātīgi iesniedzat, sazinoties ar mums:',
+        ul: [
+          'Vārds — lai mēs varētu sazināties personalizēti',
+          'Tālruņa numurs — lai apstiprinātu pierakstu',
+          'E-pasta adrese — ja to norādāt (neobligāti)',
+          'Izvēlētā procedūra — lai sagatavotos konsultācijai'
+        ],
+        p2: 'Mēs nevācam datus automātiski — mūsu vietnē nav Google Analytics, Facebook Pixel vai citu izsekošanas rīku.'
+      },
+      {
+        h: 'Kā mēs izmantojam jūsu datus',
+        ul: [
+          'Lai apstiprinātu un organizētu jūsu pierakstu',
+          'Lai atbildētu uz jūsu jautājumiem',
+          'Lai informētu par procedūras norisi vai izmaiņām laikos'
+        ],
+        p: 'Mēs nepārdodam, nenomājam un nekopīgojam jūsu datus ar trešajām pusēm mārketinga nolūkos.'
+      },
+      {
+        h: 'E-pasta saziņa',
+        p: 'Kad jūs rakstāt mums uz info@solvatabeauty.lv, jūsu ziņojums tiek saņemts un apstrādāts manuāli. Mēs neglabājam e-pasta korespondenci ilgāk, nekā nepieciešams jūsu pieprasījuma apstrādei.'
+      },
+      {
+        h: 'Tiešsaistes pieraksts — Alteg.io',
+        p: 'Mūsu vietnē ir integrēts tiešsaistes pieraksta serviss Alteg.io. Nospiežot pogu "Pierakstīties" un izmantojot šo servisu, jūs pārejatat uz Alteg.io platformu, uz kuru attiecas tās pašas privātuma politika.',
+        thirdParty: {
+          name: 'Alteg.io',
+          desc: 'Tiešsaistes pieraksta platforma. Datu apstrāde notiek Alteg.io sistēmā, uz ko attiecas viņu privātuma politika.',
+          link: 'https://alteg.io',
+          linkTxt: 'alteg.io'
+        }
+      },
+      {
+        h: 'Sīkdatnes (Cookies)',
+        p: 'Mūsu vietne izmanto tikai funkcionālās sīkdatnes — tās, kas nepieciešamas vietnes darbībai (piemēram, jūsu valodas izvēles atcerēšanās). Mēs neizmantojam analītiskās vai mārketinga sīkdatnes.'
+      },
+      {
+        h: 'Jūsu tiesības',
+        p: 'Saskaņā ar VDAR (ES Vispārīgo datu aizsardzības regulu) jums ir tiesības:',
+        ul: [
+          'Pieprasīt piekļuvi saviem datiem',
+          'Pieprasīt datu labošanu vai dzēšanu',
+          'Atsaukt piekrišanu datu apstrādei'
+        ],
+        p2: 'Lai izmantotu šīs tiesības, sazinieties ar mums: info@solvatabeauty.lv'
+      },
+      {
+        h: 'Saziņa',
+        p: 'Ja jums ir jautājumi par šo privātuma politiku, lūdzu, sazinieties ar mums:\ninfo@solvatabeauty.lv\nDeļu iela 4, Rīga LV-1004'
+      }
+    ]
+  },
+  ru: {
+    eyebrow: 'Юридическая информация',
+    title: 'Политика <em>конфиденциальности</em>',
+    date: 'Действует с: 1 мая 2026 года',
+    back: 'Назад',
+    sections: [
+      {
+        h: 'О нас',
+        p: 'Solvata Beauty — студия аппаратной косметологии в Риге. Мы обрабатываем персональные данные ответственно и только в объёме, необходимом для оказания услуг.'
+      },
+      {
+        h: 'Какие данные мы собираем',
+        p: 'Мы собираем только те данные, которые вы добровольно предоставляете при обращении к нам:',
+        ul: [
+          'Имя — чтобы обращаться к вам персонально',
+          'Номер телефона — для подтверждения записи',
+          'E-mail — если вы его указываете (необязательно)',
+          'Выбранная процедура — для подготовки к консультации'
+        ],
+        p2: 'Мы не собираем данные автоматически — на нашем сайте нет Google Analytics, Facebook Pixel или других инструментов отслеживания.'
+      },
+      {
+        h: 'Как мы используем ваши данные',
+        ul: [
+          'Для подтверждения и организации вашей записи',
+          'Для ответа на ваши вопросы',
+          'Для информирования о процедуре или изменениях времени'
+        ],
+        p: 'Мы не продаём, не сдаём в аренду и не передаём ваши данные третьим лицам в маркетинговых целях.'
+      },
+      {
+        h: 'E-mail переписка',
+        p: 'Когда вы пишете нам на info@solvatabeauty.lv, ваше сообщение получается и обрабатывается вручную. Мы не храним e-mail переписку дольше, чем необходимо для обработки вашего запроса.'
+      },
+      {
+        h: 'Онлайн-запись — Alteg.io',
+        p: 'На нашем сайте интегрирован сервис онлайн-записи Alteg.io. Нажав кнопку «Записаться» и используя этот сервис, вы переходите на платформу Alteg.io, на которую распространяется их собственная политика конфиденциальности.',
+        thirdParty: {
+          name: 'Alteg.io',
+          desc: 'Платформа онлайн-записи. Обработка данных происходит в системе Alteg.io в соответствии с их политикой конфиденциальности.',
+          link: 'https://alteg.io',
+          linkTxt: 'alteg.io'
+        }
+      },
+      {
+        h: 'Файлы cookie',
+        p: 'Наш сайт использует только функциональные cookies — те, которые необходимы для работы сайта (например, запоминание вашего выбора языка). Мы не используем аналитические или маркетинговые cookies.'
+      },
+      {
+        h: 'Ваши права',
+        p: 'В соответствии с GDPR (Общим регламентом ЕС о защите данных) вы имеете право:',
+        ul: [
+          'Запросить доступ к своим данным',
+          'Запросить исправление или удаление данных',
+          'Отозвать согласие на обработку данных'
+        ],
+        p2: 'Для реализации этих прав свяжитесь с нами: info@solvatabeauty.lv'
+      },
+      {
+        h: 'Контакты',
+        p: 'По вопросам, связанным с настоящей политикой конфиденциальности:\ninfo@solvatabeauty.lv\nDeļu iela 4, Rīga LV-1004'
+      }
+    ]
+  },
+  en: {
+    eyebrow: 'Legal information',
+    title: 'Privacy <em>Policy</em>',
+    date: 'Effective from: 1 May 2026',
+    back: 'Back',
+    sections: [
+      {
+        h: 'About us',
+        p: 'Solvata Beauty is a medical-grade aesthetic studio in Riga, Latvia. We process personal data responsibly and only to the extent necessary to provide our services.'
+      },
+      {
+        h: 'What data we collect',
+        p: 'We only collect data that you voluntarily provide when contacting us:',
+        ul: [
+          'Name — to address you personally',
+          'Phone number — to confirm your appointment',
+          'Email address — if you provide it (optional)',
+          'Selected treatment — to prepare for your consultation'
+        ],
+        p2: 'We do not collect data automatically — our website has no Google Analytics, Facebook Pixel or other tracking tools.'
+      },
+      {
+        h: 'How we use your data',
+        ul: [
+          'To confirm and organise your appointment',
+          'To respond to your enquiries',
+          'To inform you about procedures or schedule changes'
+        ],
+        p: 'We do not sell, rent or share your data with third parties for marketing purposes.'
+      },
+      {
+        h: 'Email correspondence',
+        p: 'When you write to us at info@solvatabeauty.lv, your message is received and processed manually. We do not retain email correspondence longer than necessary to handle your request.'
+      },
+      {
+        h: 'Online booking — Alteg.io',
+        p: 'Our website integrates the Alteg.io online booking service. By clicking "Book now" and using this service, you are redirected to the Alteg.io platform, which is governed by their own privacy policy.',
+        thirdParty: {
+          name: 'Alteg.io',
+          desc: 'Online booking platform. Data processing takes place within the Alteg.io system under their privacy policy.',
+          link: 'https://alteg.io',
+          linkTxt: 'alteg.io'
+        }
+      },
+      {
+        h: 'Cookies',
+        p: 'Our website uses only functional cookies — those necessary for the site to operate (e.g. remembering your language preference). We do not use analytical or marketing cookies.'
+      },
+      {
+        h: 'Your rights',
+        p: 'Under the GDPR (EU General Data Protection Regulation), you have the right to:',
+        ul: [
+          'Request access to your personal data',
+          'Request correction or deletion of your data',
+          'Withdraw consent to data processing'
+        ],
+        p2: 'To exercise these rights, contact us at: info@solvatabeauty.lv'
+      },
+      {
+        h: 'Contact',
+        p: 'For questions about this privacy policy:\ninfo@solvatabeauty.lv\nDeļu iela 4, Rīga LV-1004'
+      }
+    ]
+  }
+};
+
+function renderContent(lang) {
+  const d = content[lang];
+  document.getElementById('eyebrow').textContent = d.eyebrow;
+  document.getElementById('title').innerHTML = d.title;
+  document.getElementById('date').textContent = d.date;
+  document.getElementById('nav-back-txt').textContent = d.back;
+  document.documentElement.lang = lang;
+
+  let html = '';
+  d.sections.forEach(s => {
+    html += `<div class="doc-section"><h2>${s.h}</h2>`;
+    if (s.p) html += `<p>${s.p.replace(/\n/g,'<br>')}</p>`;
+    if (s.ul) {
+      html += '<ul>';
+      s.ul.forEach(item => html += `<li>${item}</li>`);
+      html += '</ul>';
+    }
+    if (s.p2) html += `<p>${s.p2}</p>`;
+    if (s.thirdParty) {
+      const tp = s.thirdParty;
+      html += `<div class="third-party-box">
+        <div class="name">${tp.name}</div>
+        <div class="desc">${tp.desc} <a href="${tp.link}" target="_blank" rel="noopener">${tp.linkTxt} ↗</a></div>
+      </div>`;
+    }
+    html += '</div>';
+  });
+  document.getElementById('doc-content').innerHTML = html;
+}
+
+function setLang(lang) {
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.toLowerCase() === lang));
+  renderContent(lang);
+}
+
+renderContent('lv');
+</script>
+</body>
+</html>

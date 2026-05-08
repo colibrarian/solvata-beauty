@@ -1543,9 +1543,9 @@ setLang('lv');
   if(localStorage.getItem('sb_cookies')){document.getElementById('cookie-banner').style.display='none';return;}
   function detectLang(){const active=document.querySelector('.lang-btn.active');if(active)return active.textContent.toLowerCase();return document.documentElement.lang||'lv';}
   const texts={
-    lv:{msg:'Šī vietne izmanto funkcionālās sīkdatnes jūsu valodas izvēles atcerēšanai. Mēs nevācam analītiskos vai mārketinga datus. Pieraksta pakalpojums <strong>Alteg.io</strong> darbojas saskaņā ar savu ',link:'privātuma politiku',accept:'Sapratu',decline:'Aizvērt'},
-    ru:{msg:'Этот сайт использует функциональные cookies для запоминания выбора языка. Мы не собираем аналитические или маркетинговые данные. Сервис записи <strong>Alteg.io</strong> работает в соответствии со своей ',link:'политикой конфиденциальности',accept:'Понятно',decline:'Закрыть'},
-    en:{msg:'This site uses functional cookies to remember your language preference. We do not collect analytics or marketing data. The booking service <strong>Alteg.io</strong> operates under its own ',link:'privacy policy',accept:'Got it',decline:'Close'}
+    lv:{msg:'Šī vietne izmanto funkcionālās sīkdatnes vietnes darbības nodrošināšanai un valodas izvēles atcerēšanai. Mēs nevācam personas datus un neizmantojam mārketinga izsekošanu. Turpinot lietot vietni, jūs piekrītat mūsu ',link:'privātuma politiku',accept:'Sapratu',decline:'Aizvērt'},
+    ru:{msg:'Этот сайт использует функциональные cookies для корректной работы и запоминания выбора языка. Мы не собираем персональные данные и не используем маркетинговое отслеживание. Продолжая пользоваться сайтом, вы соглашаетесь с нашей ',link:'политикой конфиденциальности',accept:'Понятно',decline:'Закрыть'},
+    en:{msg:'This site uses functional cookies to ensure correct operation and to remember your language preference. We do not collect personal data or use marketing tracking. By continuing to use this site, you agree to our ',link:'privacy policy',accept:'Got it',decline:'Close'}
   };
   function renderBanner(lang){
     const t=texts[lang]||texts.lv;

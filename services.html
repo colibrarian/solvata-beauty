@@ -414,6 +414,27 @@ footer{background:var(--text);color:rgba(255,255,255,0.6);padding:60px 5vw 40px;
 
 /* Reading progress */
 .progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:300;transition:width 0.1s linear}
+
+/* WhatsApp mini-chat */
+.wa-chat-block{background:#f0ece8;border-radius:16px;overflow:hidden;margin-bottom:1.25rem;box-shadow:0 4px 24px rgba(65,0,34,0.10);text-align:left}
+.wa-chat-header{background:#075e54;padding:14px 18px}
+.wa-chat-header-inner{display:flex;align-items:center;gap:12px}
+.wa-avatar{width:40px;height:40px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wa-chat-name{font-family:'Jost',sans-serif;font-size:0.95rem;font-weight:500;color:white;letter-spacing:0.02em}
+.wa-chat-status{font-size:0.72rem;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:5px;margin-top:2px}
+.wa-dot{width:7px;height:7px;background:#25d366;border-radius:50%;display:inline-block;animation:waPulse 2s ease-in-out infinite}
+@keyframes waPulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.wa-chat-body{padding:16px 14px;display:flex;flex-direction:column;gap:10px;background:#e5ddd5}
+.wa-bubble{max-width:82%;padding:9px 14px 6px;border-radius:12px;font-family:'Jost',sans-serif;font-size:0.875rem;line-height:1.5;position:relative;word-break:break-word}
+.wa-bubble-in{background:white;align-self:flex-start;border-top-left-radius:4px;color:#1a1015;box-shadow:0 1px 2px rgba(0,0,0,0.12)}
+.wa-bubble-out{background:#dcf8c6;align-self:flex-end;border-top-right-radius:4px;color:#1a1015;box-shadow:0 1px 2px rgba(0,0,0,0.12)}
+.wa-time{font-size:0.65rem;color:rgba(0,0,0,0.35);margin-left:8px;white-space:nowrap;float:right;margin-top:3px}
+.wa-ticks{font-size:0.72rem;color:#53bdeb;margin-left:3px;float:right;margin-top:3px}
+.wa-chat-input-row{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#f0ece8;border-top:1px solid rgba(0,0,0,0.07)}
+.wa-input{flex:1;background:white;border:none;border-radius:24px;padding:10px 16px;font-family:'Jost',sans-serif;font-size:0.875rem;font-weight:300;color:var(--text);outline:none;box-shadow:0 1px 3px rgba(0,0,0,0.10)}
+.wa-input::placeholder{color:rgba(0,0,0,0.35)}
+.wa-send-btn{width:44px;height:44px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;text-decoration:none;transition:background 0.25s,transform 0.25s;box-shadow:0 2px 8px rgba(37,211,102,0.35)}
+.wa-send-btn:hover{background:#1da851;transform:scale(1.07)}
 </style>
 </head>
 <body>
@@ -1037,7 +1058,7 @@ footer{background:var(--text);color:rgba(255,255,255,0.6);padding:60px 5vw 40px;
   <div class="service-inner reverse">
     <div class="reveal-right">
       <span class="section-label" data-i18n="las_label">Sejas un ķermeņa procedūra</span>
-      <h2 class="section-title">Diodes lāzers <em>Lamis XL</em></h2>
+      <h2 class="section-title" data-i18n="las_title">Diodes lāzers <em>Lamis XL</em></h2>
       <div class="section-divider visible-line"></div>
       <blockquote class="service-quote" data-i18n="las_quote">Minimāls diskomforts, maksimāls rezultāts — dzesēšanas sistēma padara procedūru ērtu pat jutīgās zonās.</blockquote>
       <p class="body-text" data-i18n="las_desc1">Lamis XL ir mūsdienīgs diodes lāzers ar integrētu dzesēšanas sistēmu — ērti un droši visiem ādas tipiem. Mati kļūst retāki jau pēc pirmajiem seansiem, āda paliek gluda uz ilgu laiku.</p>
@@ -1126,68 +1147,41 @@ footer{background:var(--text);color:rgba(255,255,255,0.6);padding:60px 5vw 40px;
 
 <!-- ═══════════ ALTEG BOOKING ═══════════ -->
 <section id="alteg-section">
-  <div class="booking-inner">
-    <div class="booking-left reveal">
-      <span class="section-label" data-i18n="book_label">Pieraksts</span>
-      <h2 class="section-title" data-i18n="book_title">Sāciet savu <em>ceļu</em><br>uz skaistumu</h2>
-      <p class="section-sub" style="margin-bottom:2.5rem" data-i18n="book_sub">Atstājiet kontaktinformāciju un mēs sazināsimies ar jums, lai vienotos par ērtāko laiku.</p>
+  <div class="booking-inner" style="display:flex;flex-direction:column;align-items:center;">
+    <div class="booking-left reveal" style="width:100%;max-width:620px;">
+      <span class="section-label" style="text-align:center;display:block;" data-i18n="book_label">Pieraksts</span>
+      <h2 class="section-title" style="text-align:center;" data-i18n="book_title">Sāciet savu <em>ceļu</em><br>uz skaistumu</h2>
+      <p class="section-sub" style="margin-bottom:2.5rem;text-align:center;" data-i18n="book_sub">Sazinieties ar mums WhatsApp — atbildēsim ātri un palīdzēsim izvēlēties piemērotāko procedūru.</p>
       <div id="booking-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" data-i18n="form_name_label">Vārds</label>
-            <input type="text" class="form-input" id="f-name" placeholder="Jūsu vārds" data-i18n-ph="form_name_ph">
-          </div>
-          <div class="form-group">
-            <label class="form-label" data-i18n="form_phone_label">Tālrunis</label>
-            <input type="tel" class="form-input" id="f-phone" placeholder="+371 __ __ ____">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" data-i18n="form_email_label">E-pasts <span style="opacity:0.5;font-size:0.9em" data-i18n="form_optional">(neobligāti)</span></label>
-          <input type="email" class="form-input" id="f-email" placeholder="jūsu@epasts.lv">
-        </div>
-        <div class="form-group">
-          <label class="form-label" data-i18n="form_service_label">Pakalpojums</label>
-          <div class="form-select-wrap">
-            <select class="form-select" id="f-service">
-              <option value="" data-i18n="form_service_default">— Izvēlieties procedūru —</option>
-              <option value="zionic">Zionic</option>
-              <option value="endymed-mn">Endymed Intensif Microneedling</option>
-              <option value="endymed-fsr">Endymed FSR</option>
-              <option value="endyeye">ENDYEye — Eyes Lifting</option>
-              <option value="endospheres-body">Endospheres (ķermenis)</option>
-              <option value="endospheres-face">Endospheres (seja)</option>
-              <option value="geneo">Pollogen Geneo</option>
-              <option value="tripollar">TriPollar RF</option>
-              <option value="laser">Diodes lāzers Lamis XL</option>
-              <option value="injections" data-i18n="inj_label">Injekciju procedūras</option>
-              <option value="consult" data-i18n="form_consult_opt">Konsultācija</option>
-            </select>
-          </div>
-        </div>
-        <button class="form-submit" onclick="submitForm()" data-i18n="book_btn">Pierakstīties</button>
-        <p class="form-note" data-i18n="form_note">Mēs sazināsimies ar jums 24 stundu laikā</p>
-      </div>
-      <div class="form-success" id="form-success">
-        <div style="font-size:2rem;margin-bottom:0.5rem">✦</div>
-        <span data-i18n="form_success_msg">Paldies! Drīz būsim saskarē.</span>
-      </div>
-    </div>
-
-    <div class="booking-right reveal" style="display:none">
-      <div class="alteg-block">
-        <div class="alteg-header">
-          <div class="alteg-header-label" data-i18n="alteg_label">Tiešsaistes pieraksts</div>
-          <div class="alteg-header-title" data-i18n="alteg_title">Izvēlieties ērtāko laiku</div>
-        </div>
-        <div class="alteg-body">
-          <p class="alteg-desc" data-i18n="alteg_desc">Izmantojiet mūsu tiešsaistes pieraksta sistēmu, lai izvēlētos ērtāko laiku un procedūru. Pieraksts pieejams 24/7.</p>
-          <div class="alteg-placeholder" id="alteg-widget">
-            <div class="alteg-placeholder-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><circle cx="8" cy="15" r="1.5" fill="currentColor"/><circle cx="12" cy="15" r="1.5" fill="currentColor"/><circle cx="16" cy="15" r="1.5" fill="currentColor"/></svg>
+        <!-- WhatsApp mini-chat -->
+        <div class="wa-chat-block">
+          <div class="wa-chat-header">
+            <div class="wa-chat-header-inner">
+              <div class="wa-avatar">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.554 4.11 1.523 5.837L0 24l6.337-1.502A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.373l-.36-.214-3.727.883.916-3.618-.235-.372A9.818 9.818 0 1112 21.818z"/></svg>
+              </div>
+              <div>
+                <div class="wa-chat-name">Solvata Beauty</div>
+                <div class="wa-chat-status"><span class="wa-dot"></span>online</div>
+              </div>
             </div>
-            <div class="alteg-placeholder-title" data-i18n="alteg_ph_title">Alteg.io kalendārs</div>
-            <div class="alteg-placeholder-sub" data-i18n="alteg_ph_sub">Šeit tiks integrēts tiešsaistes<br>pieraksta kalendārs</div>
+          </div>
+          <div class="wa-chat-body">
+            <div class="wa-bubble wa-bubble-in">
+              <span data-i18n="wa_bubble_in">Sveiki! Kādā procedūrā interesējaties? ✨</span>
+              <span class="wa-time">10:24</span>
+            </div>
+            <div class="wa-bubble wa-bubble-out" id="wa-preview-bubble">
+              <span id="wa-preview-text">Sveiki! Vēlos pierakstīties...</span>
+              <span class="wa-time">10:25</span>
+              <span class="wa-ticks">✓✓</span>
+            </div>
+          </div>
+          <div class="wa-chat-input-row">
+            <input type="text" class="wa-input" id="wa-message" placeholder="Ierakstiet savu ziņu..." oninput="updateWaPreview(this.value)">
+            <a class="wa-send-btn" id="wa-send-link" href="https://wa.me/37122330666?text=Sveiki!" target="_blank" onclick="buildWaLink(event)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -1389,10 +1383,10 @@ const tr={
     geo_caps_title:'Kapsulas pēc ādas vajadzībām',cap_ill_t:'Spīdums · Pigmentācija',cap_ill:'Vitamīns C un skābes — izlīdzina toni, mazina pigmentāciju.',cap_hyd_t:'Mitrums',cap_hyd:'Intensīva mitrināšana dehidrētai ādai.',cap_rev_t:'Anti-age',cap_rev:'Antioksidanti — uzlabo tonusu, darbojas ar novecošanos.',cap_det_t:'Aizsardzība',cap_det:'Zaļā tēja un spirulīna — pilsētas ādai.',cap_bal_t:'Taukaina āda',cap_bal:'Ogle — attīra poras, regulē sebumu.',cap_gla_t:'Tūlītējs spīdums',cap_gla:'Glow efekts uz pasākumu.',cap_exo_t:'Jaunākā paaudze · Reģenerācija',cap_exo:'Eksosomas pastiprina ādas atjaunošanās procesus, uzlabo blīvumu un piešķir anti-age efektu. 1 procedūra vai kurss 3–5 seansēs; uzturošā — 1× mēnesī.',
     tri_label:'Sejas procedūra',tri_quote:'Ādas tonuss un elasticitāte uzlabojas pakāpeniski, bet pārliecinoši — ar katru procedūru.',tri_desc1:'TriPollar RF ir klasiskais radiofrekvences liftings — maigs, bez ādas bojājumiem. Uzsilda mīkstos audus, stimulē kolagēna veidošanos un nodrošina redzamu savilkšanas efektu jau pēc pirmās procedūras. Ideāls kā regulāra uzturošā kopšana.',tri_desc2:'Ieteicams 1× mēnesī kā uzturošā procedūra. Kurss dod ilgstošu rezultātu, ko regulārās procedūras saglabā.',
     tri_sv1:'Tūlītējs',tri_sk1:'Efekts',tri_sv2:'Nav',tri_sk2:'Rehabilitācija',tri_sk3:'Mēnesī — uzturošā',tri_e1:'Ādas savilkšana',tri_e2:'Grumbas',tri_e3:'Sejas ovāls',tri_e4:'Viegls lipolīzs',tri_e5:'Ādas tonuss',
-    las_label:'Sejas un ķermeņa procedūra',las_quote:'Minimāls diskomforts, maksimāls rezultāts — dzesēšanas sistēma padara procedūru ērtu pat jutīgās zonās.',las_desc1:'Lamis XL ir mūsdienīgs diodes lāzers ar integrētu dzesēšanas sistēmu — ērti un droši visiem ādas tipiem. Mati kļūst retāki jau pēc pirmajiem seansiem, āda paliek gluda uz ilgu laiku.',las_desc2:'Pēc kursa pabeigšanas mati kļūst manāmi retāki un plānāki. Lāzera epilācija ir ilgtermiņa ieguldījums gluda ādā.',
+    las_title:'Diodes lāzers <em>Lamis XL</em>',las_label:'Sejas un ķermeņa procedūra',las_quote:'Minimāls diskomforts, maksimāls rezultāts — dzesēšanas sistēma padara procedūru ērtu pat jutīgās zonās.',las_desc1:'Lamis XL ir mūsdienīgs diodes lāzers ar integrētu dzesēšanas sistēmu — ērti un droši visiem ādas tipiem. Mati kļūst retāki jau pēc pirmajiem seansiem, āda paliek gluda uz ilgu laiku.',las_desc2:'Pēc kursa pabeigšanas mati kļūst manāmi retāki un plānāki. Lāzera epilācija ir ilgtermiņa ieguldījums gluda ādā.',
     las_sk1:'Seansi kursā',las_sv2:'Visi',las_sk2:'Ādas tipi',las_sv3:'Seja+ķermenis',las_sk3:'Zonas',las_e1:'Ilglaicīga epilācija',las_e2:'Gluda āda',las_e3:'Matu retināšana',las_e4:'Mazāks diskomforts',
     strip_label:'Pieraksts',strip_title:'Sāciet savu ceļu uz <em>skaistumu</em>',strip_sub:'Individuāla konsultācija — mēs palīdzēsim izvēlēties pareizo procedūru jūsu ādas vajadzībām.',strip_btn:'Pierakstīties',
-    book_label:'Pieraksts',book_title:'Sāciet savu <em>ceļu</em><br>uz skaistumu',book_sub:'Atstājiet kontaktinformāciju un mēs sazināsimies ar jums, lai vienotos par ērtāko laiku.',book_btn:'Pierakstīties',
+    book_label:'Pieraksts',book_title:'Sāciet savu <em>ceļu</em><br>uz skaistumu',book_sub:'Sazinieties ar mums WhatsApp — atbildēsim ātri un palīdzēsim izvēlēties piemērotāko procedūru.',wa_bubble_in:'Sveiki! Kādā procedūrā interesējaties? ✨',book_btn:'Pierakstīties',
     form_name_label:'Vārds',form_name_ph:'Jūsu vārds',form_phone_label:'Tālrunis',form_email_label:'E-pasts',form_optional:'(neobligāti)',form_service_label:'Pakalpojums',form_service_default:'— Izvēlieties procedūru —',form_consult_opt:'Konsultācija',form_note:'Mēs sazināsimies ar jums 24 stundu laikā',form_success_msg:'Paldies! Drīz būsim saskarē.',
     alteg_label:'Tiešsaistes pieraksts',alteg_title:'Izvēlieties ērtāko laiku',alteg_desc:'Izmantojiet mūsu tiešsaistes pieraksta sistēmu, lai izvēlētos ērtāko laiku un procedūru. Pieraksts pieejams 24/7.',alteg_ph_title:'Alteg.io kalendārs',alteg_ph_sub:'Šeit tiks integrēts tiešsaistes pieraksta kalendārs',
     modal_body_label:'Ķermeņa procedūras',modal_face_label:'Sejas procedūras',modal_face_body_label:'Seja un ķermenis',modal_laser_label:'Lāzerepiācija',modal_face:'Seja',modal_body:'Ķermenis',modal_combos:'Komplekti',modal_device_endymed:'Aparāts Endymed',modal_device_fsr:'Aparāts Endymed FSR',modal_device_pollogen:'Aparāts Pollogen',
@@ -1430,7 +1424,7 @@ const tr={
     endo_label:'Лицо и тело',endo_quote:'Процедура мягко, но эффективно воздействует на кожу, сосуды и мышечные структуры одновременно. Результат виден уже после первого сеанса.',endo_desc1:'Endospheres Therapy разработана совместно с флебологом проф. Пьером Антонио Баччи. Аппарат с 55 силиконовыми микросферами воздействует одновременно на кожу, стенки сосудов и мышечные волокна — без вакуумного всасывания, без рисков.',endo_first_session:'1-й сеанс — 35€',endo_body_title:'Endospheres для тела',endo_e1:'Уменьшение отёков',endo_e2:'Лимфодренаж',endo_e3:'Уменьшение целлюлита',endo_e4:'Микроциркуляция',endo_e5:'Тяжесть в ногах',endo_face_title:'Endospheres для лица',endo_f1:'Лифтинг овала лица',endo_f2:'Тон и цвет кожи',endo_f3:'Плотность и тонус',endo_f4:'Уменьшение отёков',endo_sv1:'1-й сеанс',endo_sk1:'Первый эффект',endo_sk2:'Сеансов в курсе',endo_sv3:'Нет',endo_sk3:'Реабилитация',
     geo_label:'Процедура для лица',geo_quote:'Видимое сияние, свежесть и подтянутая кожа — уже после первой процедуры. Идеально перед особыми мероприятиями.',geo_desc1:'Pollogen Geneo воздействует на кожу одновременно на трёх уровнях: OxyGeneo насыщает кожу кислородом изнутри, RF-лифтинг стимулирует коллагенообразование, ультразвук усиливает проникновение активных компонентов.',geo_s1:'Очищение',geo_s1d:'глубокое очищение пор и подготовка кожи',geo_s2:'OxyGeneo',geo_s2d:'кислород изнутри улучшает циркуляцию и сияние кожи',geo_s3:'Питание',geo_s3d:'введение активных веществ через выбранную капсулу',geo_s4:'TriPollar RF',geo_s4d:'стимуляция коллагена и укрепление кожи',geo_caps_title:'Капсулы под потребности вашей кожи',cap_ill_t:'Сияние · Пигментация',cap_ill:'Витамин C и кислоты — выравнивают тон, уменьшают пигментацию.',cap_hyd_t:'Увлажнение',cap_hyd:'Интенсивное увлажнение обезвоженной кожи.',cap_rev_t:'Anti-age',cap_rev:'Антиоксиданты — улучшают тонус, работают с признаками старения.',cap_det_t:'Защита',cap_det:'Зелёный чай и спирулина — для кожи мегаполиса.',cap_bal_t:'Жирная кожа',cap_bal:'Уголь — очищает поры, регулирует себум.',cap_gla_t:'Мгновенное сияние',cap_gla:'Glow-эффект перед мероприятием.',cap_exo_t:'Новое поколение · Регенерация',cap_exo:'Экзосомы усиливают процессы обновления кожи, улучшают плотность и дают anti-age эффект. 1 процедура или курс 3–5 сеансов; поддерживающая — 1× в месяц.',
     tri_label:'Процедура для лица',tri_quote:'Тонус и эластичность кожи улучшаются постепенно, но уверенно — с каждой процедурой.',tri_desc1:'TriPollar RF — классический радиочастотный лифтинг — мягкий, без повреждения кожи. Прогревает мягкие ткани, стимулирует коллаген и обеспечивает видимое подтягивание уже после первой процедуры.',tri_desc2:'Рекомендуется 1× в месяц как поддерживающая процедура. Курс даёт длительный результат, который регулярные процедуры закрепляют.',tri_sv1:'Мгновенный',tri_sk1:'Эффект',tri_sv2:'Нет',tri_sk2:'Реабилитация',tri_sk3:'В месяц — поддержка',tri_e1:'Подтяжка кожи',tri_e2:'Морщины',tri_e3:'Овал лица',tri_e4:'Лёгкий липолиз',tri_e5:'Тонус кожи',
-    las_label:'Процедура для лица и тела',las_quote:'Минимальный дискомфорт, максимальный результат — система охлаждения делает процедуру комфортной даже в чувствительных зонах.',las_desc1:'Lamis XL — современный диодный лазер со встроенной системой охлаждения — комфортно и безопасно для всех типов кожи. Волосы становятся реже уже после первых сеансов.',las_desc2:'После завершения курса волосы становятся заметно тоньше и реже. Лазерная эпиляция — долгосрочное вложение в гладкую кожу.',las_sk1:'Сеансов в курсе',las_sv2:'Все',las_sk2:'Типы кожи',las_sv3:'Лицо+тело',las_sk3:'Зоны',las_e1:'Длительная эпиляция',las_e2:'Гладкая кожа',las_e3:'Уменьшение роста волос',las_e4:'Минимальный дискомфорт',
+    las_title:'Диодный лазер <em>Lamis XL</em>',las_label:'Процедура для лица и тела',las_quote:'Минимальный дискомфорт, максимальный результат — система охлаждения делает процедуру комфортной даже в чувствительных зонах.',las_desc1:'Lamis XL — современный диодный лазер со встроенной системой охлаждения — комфортно и безопасно для всех типов кожи. Волосы становятся реже уже после первых сеансов.',las_desc2:'После завершения курса волосы становятся заметно тоньше и реже. Лазерная эпиляция — долгосрочное вложение в гладкую кожу.',las_sk1:'Сеансов в курсе',las_sv2:'Все',las_sk2:'Типы кожи',las_sv3:'Лицо+тело',las_sk3:'Зоны',las_e1:'Длительная эпиляция',las_e2:'Гладкая кожа',las_e3:'Уменьшение роста волос',las_e4:'Минимальный дискомфорт',
     strip_label:'Запись',strip_title:'Начните свой путь к <em>красоте</em>',strip_sub:'Индивидуальная консультация — мы поможем выбрать правильную процедуру для вашей кожи.',strip_btn:'Записаться',book_label:'Запись',book_title:'Начните свой <em>путь</em><br>к красоте',book_sub:'Оставьте контакты — мы свяжемся и договоримся об удобном времени.',book_btn:'Записаться',
     form_name_label:'Имя',form_name_ph:'Ваше имя',form_phone_label:'Телефон',form_email_label:'Email',form_optional:'(необязательно)',form_service_label:'Процедура',form_service_default:'— Выберите процедуру —',form_consult_opt:'Консультация',form_note:'Мы свяжемся с вами в течение 24 часов',form_success_msg:'Спасибо! Скоро будем на связи.',
     alteg_label:'Онлайн-запись',alteg_title:'Выберите удобное время',alteg_desc:'Запишитесь онлайн — выберите процедуру и время. Доступно 24/7.',alteg_ph_title:'Календарь Alteg.io',alteg_ph_sub:'Здесь будет интегрирован виджет онлайн-записи',
@@ -1465,7 +1459,7 @@ const tr={
     endo_label:'Face & body',endo_quote:'The procedure gently but effectively acts on the skin, blood vessels and muscle structures simultaneously. Results are visible after the very first session.',endo_desc1:'Endospheres Therapy was developed with phlebologist Prof. Pier Antonio Bacci. The device with 55 silicone microspheres generates compression microvibration that acts simultaneously on skin, vessel walls and muscle fibres — no suction, no risk.',endo_first_session:'1st session — 35€',endo_body_title:'Endospheres for body',endo_e1:'Edema reduction',endo_e2:'Lymph drainage',endo_e3:'Cellulite reduction',endo_e4:'Microcirculation',endo_e5:'Leg heaviness',endo_face_title:'Endospheres for face',endo_f1:'Facial oval lift',endo_f2:'Skin tone & colour',endo_f3:'Density & tone',endo_f4:'Edema reduction',endo_sv1:'1st session',endo_sk1:'First visible effect',endo_sk2:'Sessions in course',endo_sv3:'None',endo_sk3:'Recovery',
     geo_label:'Facial treatment',geo_quote:'Visible radiance, freshness and lifted skin — after the very first session. Perfect before special occasions.',geo_desc1:'Pollogen Geneo acts on skin simultaneously at three levels: OxyGeneo saturates skin with oxygen from within, RF lifting stimulates collagen, ultrasound enhances active ingredient absorption.',geo_s1:'Cleansing',geo_s1d:'deep pore cleansing and skin preparation',geo_s2:'OxyGeneo',geo_s2d:'oxygen from within improves circulation and skin radiance',geo_s3:'Nourishment',geo_s3d:'delivery of active ingredients via chosen capsule',geo_s4:'TriPollar RF',geo_s4d:'collagen stimulation and skin firming',geo_caps_title:'Capsules for your skin\'s needs',cap_ill_t:'Radiance · Pigmentation',cap_ill:'Vitamin C and acids — even skin tone, reduce pigmentation.',cap_hyd_t:'Hydration',cap_hyd:'Intensive hydration for dehydrated skin.',cap_rev_t:'Anti-age',cap_rev:'Antioxidants — improve tone and address signs of ageing.',cap_det_t:'Protection',cap_det:'Green tea and spirulina — for city-tired skin.',cap_bal_t:'Oily skin',cap_bal:'Charcoal — cleanses pores, regulates sebum.',cap_gla_t:'Instant radiance',cap_gla:'Glow effect before an event.',cap_exo_t:'Next generation · Regeneration',cap_exo:'Exosomes intensify skin renewal, improve density and deliver anti-age effect. 1 session or course of 3–5; maintenance — once a month.',
     tri_label:'Facial treatment',tri_quote:'Skin tone and elasticity improve gradually but convincingly — with every session.',tri_desc1:'TriPollar RF is classic radiofrequency lifting — gentle, non-ablative. Heats soft tissues, stimulates collagen and delivers visible tightening after the very first session. Ideal as a regular maintenance procedure.',tri_desc2:'Recommended once a month as a maintenance procedure. A course delivers long-lasting results that regular sessions preserve.',tri_sv1:'Instant',tri_sk1:'Effect',tri_sv2:'None',tri_sk2:'Recovery',tri_sk3:'Monthly — maintenance',tri_e1:'Skin tightening',tri_e2:'Wrinkles',tri_e3:'Facial oval',tri_e4:'Mild lipolysis',tri_e5:'Skin tone',
-    las_label:'Face & body treatment',las_quote:'Minimal discomfort, maximum results — the cooling system makes the procedure comfortable even in sensitive areas.',las_desc1:'Lamis XL is a modern diode laser with an integrated cooling system — comfortable and safe for all skin types. Hair becomes sparser after the very first sessions.',las_desc2:'After completing the course, hair becomes noticeably thinner and sparser. Laser epilation is a long-term investment in smooth skin.',las_sk1:'Sessions in course',las_sv2:'All',las_sk2:'Skin types',las_sv3:'Face+body',las_sk3:'Areas',las_e1:'Long-lasting epilation',las_e2:'Smooth skin',las_e3:'Hair reduction',las_e4:'Minimal discomfort',
+    las_title:'Diode Laser <em>Lamis XL</em>',las_label:'Face & body treatment',las_quote:'Minimal discomfort, maximum results — the cooling system makes the procedure comfortable even in sensitive areas.',las_desc1:'Lamis XL is a modern diode laser with an integrated cooling system — comfortable and safe for all skin types. Hair becomes sparser after the very first sessions.',las_desc2:'After completing the course, hair becomes noticeably thinner and sparser. Laser epilation is a long-term investment in smooth skin.',las_sk1:'Sessions in course',las_sv2:'All',las_sk2:'Skin types',las_sv3:'Face+body',las_sk3:'Areas',las_e1:'Long-lasting epilation',las_e2:'Smooth skin',las_e3:'Hair reduction',las_e4:'Minimal discomfort',
     strip_label:'Booking',strip_title:'Begin your journey to <em>beauty</em>',strip_sub:'Individual consultation — we will help you choose the right procedure for your skin\'s needs.',strip_btn:'Book now',book_label:'Booking',book_title:'Begin your <em>journey</em><br>to beauty',book_sub:'Leave your contact details — we\'ll reach out and arrange a time that suits you.',book_btn:'Book now',
     form_name_label:'Name',form_name_ph:'Your name',form_phone_label:'Phone',form_email_label:'Email',form_optional:'(optional)',form_service_label:'Procedure',form_service_default:'— Select a procedure —',form_consult_opt:'Consultation',form_note:'We will contact you within 24 hours',form_success_msg:'Thank you! We\'ll be in touch shortly.',
     alteg_label:'Online booking',alteg_title:'Choose a convenient time',alteg_desc:'Book online — choose your procedure and time. Available 24/7.',alteg_ph_title:'Alteg.io calendar',alteg_ph_sub:'Online booking widget will be integrated here',
@@ -1492,6 +1486,17 @@ const tr={
   }
 };
 
+
+function updateWaPreview(val) {
+  const preview = document.getElementById('wa-preview-text');
+  if (preview) preview.textContent = val.trim() ? val : 'Sveiki! Vēlos pierakstīties...';
+}
+function buildWaLink(e) {
+  const msg = document.getElementById('wa-message');
+  const base = 'https://wa.me/37122330666?text=';
+  const text = msg && msg.value.trim() ? msg.value.trim() : 'Sveiki! Vēlos pierakstīties.';
+  document.getElementById('wa-send-link').href = base + encodeURIComponent(text);
+}
 function setLang(l){
   lang=l;
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase()===l));
@@ -1554,5 +1559,7 @@ function hideBanner(){const b=document.getElementById('cookie-banner');b.classLi
 <!-- ═══════════ END COOKIE BANNER ═══════════ -->
 
   
+<!-- Alteg.io floating booking widget -->
+<script type="text/javascript" src="https://w788862.alteg.io/widgetJS" charset="UTF-8"></script>
 </body>
 </html>

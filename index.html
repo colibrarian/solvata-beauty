@@ -1814,23 +1814,13 @@
 <section id="booking">
   <div class="booking-inner">
 
-    <!-- LEFT: Contact form -->
+    <!-- CONTACT: WhatsApp -->
     <div class="booking-left reveal">
       <span class="section-label" data-i18n="book_label">Pieraksts</span>
       <h2 class="section-title" data-i18n="book_title">Sāciet savu <em>ceļu</em><br>uz skaistumu</h2>
-      <p class="section-sub" style="margin-bottom:2.5rem" data-i18n="book_sub">Atstājiet kontaktinformāciju un mēs sazināsimies ar jums, lai vienotos par ērtāko laiku.</p>
+      <p class="section-sub" style="margin-bottom:2.5rem" data-i18n="book_sub">Sazinieties ar mums WhatsApp — atbildēsim ātri un palīdzēsim izvēlēties piemērotāko procedūru.</p>
 
       <div id="booking-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" data-i18n="form_name_label">Vārds</label>
-            <input type="text" class="form-input" id="f-name" data-i18n-ph="form_name_ph" placeholder="Jūsu vārds">
-          </div>
-          <div class="form-group">
-            <label class="form-label" data-i18n="form_phone_label">Tālrunis</label>
-            <input type="tel" class="form-input" id="f-phone" placeholder="+371 __ __ ____">
-          </div>
-        </div>
         <!-- WhatsApp mini-chat -->
         <div class="wa-chat-block">
           <div class="wa-chat-header">
@@ -1862,30 +1852,6 @@
             </a>
           </div>
         </div>
-        <div class="form-group">
-          <label class="form-label" data-i18n="form_service_label">Pakalpojums</label>
-          <div class="form-select-wrap">
-            <select class="form-select" id="f-service">
-              <option value="" data-i18n="form_service_default">— Izvēlieties procedūru —</option>
-              <option value="zionic">Zionic</option>
-              <option value="endymed-mn">Endymed Intensive Microneedling</option>
-              <option value="endymed-fsr">Endymed FSR</option>
-              <option value="endyeye">ENDYEye — Eyes Lifting</option>
-              <option value="endospheres-body">Endospheres (ķermenis)</option>
-              <option value="endospheres-face">Endospheres (seja)</option>
-              <option value="geneo">Pollogen Geneo</option>
-              <option value="tripollar">TriPollar RF</option>
-              <option value="laser">Diodes lāzers Lamis XL</option>
-              <option value="consult" data-i18n="form_consult_opt">Konsultācija</option>
-            </select>
-          </div>
-        </div>
-        <button class="form-submit" onclick="submitViaWhatsApp()" data-i18n="book_btn">Pierakstīties</button>
-        <p class="form-note" data-i18n="form_note">Mēs sazināsimies ar jums 24 stundu laikā</p>
-      </div>
-      <div class="form-success" id="form-success">
-        <div style="font-size:2rem;margin-bottom:0.5rem">✦</div>
-        <span data-i18n="form_success_msg">Paldies! Mēs drīz sazināsimies ar jums.</span>
       </div>
     </div>
 
@@ -2228,25 +2194,7 @@ document.addEventListener('keydown', e => {
 
 // FORM SUBMIT
 function submitViaWhatsApp() {
-  const name = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const service = document.getElementById('f-service');
-  const serviceText = service && service.selectedIndex > 0 ? service.options[service.selectedIndex].text : '';
-
-  if (!name || !phone) {
-    const inp = !name ? document.getElementById('f-name') : document.getElementById('f-phone');
-    inp.style.borderColor = 'rgba(65,0,34,0.6)';
-    inp.focus();
-    setTimeout(() => inp.style.borderColor = '', 2000);
-    return;
-  }
-
-  let msg = 'Sveiki! Vēlos pierakstīties.';
-  msg += '\nVārds: ' + name;
-  msg += '\nTālrunis: ' + phone;
-  if (serviceText) msg += '\nProcedūra: ' + serviceText;
-
-  window.open('https://wa.me/37120579106?text=' + encodeURIComponent(msg), '_blank');
+  // Not used — WA chat sends via buildWaLink
 }
 
 // ================================
@@ -2318,7 +2266,7 @@ const translations = {
     review6_text:"Gribu pateikties meisterei, kura šodien man veica procedūru. Endosfēra izdarīta ļoti profesionāli, sejas masāža — vienkārši fantastiska. Tik daudz rūpības katrā darbībā ❤️",
     review6_proc:"Endospheres + sejas masāža",
     book_label:"Pieraksts", book_title:"Sāciet savu <em>ceļu</em><br>uz skaistumu",
-    book_sub:"Atstājiet kontaktinformāciju — mēs sazināsimies un vienosimies par jums ērtāko laiku.",
+    book_sub:"Sazinieties ar mums WhatsApp — atbildēsim ātri un palīdzēsim izvēlēties piemērotāko procedūru.",
     book_phone_ph:"+371 __ __ ____", book_btn:"Pierakstīties",
     form_name_label:"Vārds", form_name_ph:"Jūsu vārds",
     form_phone_label:"Tālrunis",
@@ -2492,7 +2440,7 @@ const translations = {
     review6_text:"Хочу поблагодарить мастера за заботу. Эндосфера сделана очень профессионально, массаж лица — просто фантастический. Столько внимания в каждом движении ❤️",
     review6_proc:"Endospheres + массаж лица",
     book_label:"Запись", book_title:"Начните свой <em>путь</em><br>к красоте",
-    book_sub:"Оставьте контакты — мы свяжемся и договоримся об удобном времени.",
+    book_sub:"Напишите нам в WhatsApp — ответим быстро и поможем выбрать подходящую процедуру.",
     book_phone_ph:"+371 __ __ ____", book_btn:"Записаться",
     form_name_label:"Имя", form_name_ph:"Ваше имя",
     form_phone_label:"Телефон",
@@ -2666,7 +2614,7 @@ const translations = {
     review6_text:"Want to thank the specialist who did my procedure. The endospheres was done very professionally and the facial massage was simply fantastic — so much care in every movement ❤️",
     review6_proc:"Endospheres + facial massage",
     book_label:"Booking", book_title:"Begin your <em>journey</em><br>to beauty",
-    book_sub:"Leave your contact details — we'll reach out and arrange a time that suits you.",
+    book_sub:"Contact us on WhatsApp — we respond quickly and will help you choose the right treatment.",
     book_phone_ph:"+371 __ __ ____", book_btn:"Book now",
     form_name_label:"Name", form_name_ph:"Your name",
     form_phone_label:"Phone",

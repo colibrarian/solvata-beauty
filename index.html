@@ -1847,7 +1847,7 @@
           </div>
           <div class="wa-chat-input-row">
             <input type="text" class="wa-input" id="wa-message" placeholder="Ierakstiet savu ziņu..." oninput="updateWaPreview(this.value)">
-            <a class="wa-send-btn" id="wa-send-link" href="https://wa.me/37120579106?text=Sveiki!" target="_blank" onclick="buildWaLink(event)">
+            <a class="wa-send-btn" id="wa-send-link" href="https://wa.me/37122330666?text=Sveiki!" target="_blank" onclick="buildWaLink(event)">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             </a>
           </div>
@@ -2751,7 +2751,7 @@ function updateWaPreview(val) {
 }
 function buildWaLink(e) {
   const msg = document.getElementById('wa-message');
-  const base = 'https://wa.me/37120579106?text=';
+  const base = 'https://wa.me/37122330666?text=';
   const text = msg && msg.value.trim() ? msg.value.trim() : 'Sveiki! Vēlos pierakstīties.';
   document.getElementById('wa-send-link').href = base + encodeURIComponent(text);
 }

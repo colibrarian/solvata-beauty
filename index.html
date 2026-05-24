@@ -37,6 +37,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1255684939979569');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1255684939979569&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+
 <style>
   :root {
     --accent: #410022;
@@ -1343,7 +1361,7 @@
     <a href="#booking" class="nav-cta" data-i18n="nav_book">Pierakstīties</a>
   </div>
   <div class="nav-right">
-    <a href="#equipment" class="nav-services-link" data-i18n="nav_services">Pakalpojumi</a>
+    <a href="rf-microneedling.html" class="nav-services-link" data-i18n="nav_promo">Mēneša procedūra</a>
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('lv')">LV</button>
       <button class="lang-btn" onclick="setLang('ru')">RU</button>
@@ -2294,7 +2312,7 @@ const translations = {
     team_sub:"Speciālistes ar medicīnisko izglītību, kas nemitīgi pilnveido savas zināšanas un patiesi rūpējas par katras klientēs rezultātu.",
     team1_name:"Diāna Ručevska", team1_role:"Direktore un dibinātāja", team1_quote:"«Solvata Beauty dibinātāja. Piecus gadus attīsta aparatūras kosmetoloģiju Latvijā — ar pārliecību, ka katrai sievietei pienākas profesionāla pieeja un reāls rezultāts.»",
     team2_name:"Elīna Veļesova", team2_role:"Skaistumkopšanas speciāliste", team2_quote:"«LU P. Stradiņa medicīnas koledža · RF tehnoloģiju eksperte · Pastāvīga kvalifikācijas pilnveide»",
-    nav_services:"Pakalpojumi", equip_subpage_btn:"Visi pakalpojumi un detalizēts apraksts →",
+    nav_promo:"Mēneša procedūra", equip_subpage_btn:"Visi pakalpojumi un detalizēts apraksts →",
     price_btn_zionic:"Cenas", price_btn_endymed:"Cenas", price_btn_fsr:"Cenas",
     price_btn_endyeye:"Cenas", price_btn_endospheres:"Cenas", price_btn_geneo:"Cenas",
     price_btn_tripollar:"Cenas", price_btn_laser:"Cenas",
@@ -2468,7 +2486,7 @@ const translations = {
     team_sub:"Специалисты с медицинским образованием, которые постоянно совершенствуют знания и искренне заботятся о результате каждой клиентки.",
     team1_name:"Диана Ручевская", team1_role:"Директор и основатель", team1_quote:"«Основатель Solvata Beauty. Пять лет развивает аппаратную косметологию в Латвии — с убеждением, что каждая женщина заслуживает профессионального подхода и настоящего результата.»",
     team2_name:"Элина Велесова", team2_role:"Специалист по косметологии", team2_quote:"«Мед. колледж им. Страдиня · Эксперт по RF-технологиям · Постоянное повышение квалификации»",
-    nav_services:"Услуги", equip_subpage_btn:"Все процедуры и подробное описание →",
+    nav_promo:"Процедура месяца", equip_subpage_btn:"Все процедуры и подробное описание →",
     price_btn_zionic:"Цены", price_btn_endymed:"Цены", price_btn_fsr:"Цены",
     price_btn_endyeye:"Цены", price_btn_endospheres:"Цены", price_btn_geneo:"Цены",
     price_btn_tripollar:"Цены", price_btn_laser:"Цены",
@@ -2642,7 +2660,7 @@ const translations = {
     team_sub:"Specialists with medical education who continuously develop their expertise and genuinely care about every client's results.",
     team1_name:"Diana Ručevska", team1_role:"Founder & Director", team1_quote:"«Founder of Solvata Beauty. Five years developing medical aesthetics in Latvia — with a firm belief that every woman deserves a professional approach and real, lasting results.»",
     team2_name:"Elīna Veļesova", team2_role:"Aesthetic specialist", team2_quote:"«P. Stradiņš Medical College · RF technology expert · Continuous professional development»",
-    nav_services:"Services", equip_subpage_btn:"All treatments & detailed overview →",
+    nav_promo:"Treatment of the Month", equip_subpage_btn:"All treatments & detailed overview →",
     price_btn_zionic:"Prices", price_btn_endymed:"Prices", price_btn_fsr:"Prices",
     price_btn_endyeye:"Prices", price_btn_endospheres:"Prices", price_btn_geneo:"Prices",
     price_btn_tripollar:"Prices", price_btn_laser:"Prices",

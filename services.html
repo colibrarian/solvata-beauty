@@ -9,6 +9,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1255684939979569');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1255684939979569&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+
 <style>
 /* ─── TOKENS — identical to main site ───────────────── */
 :root {
@@ -233,6 +251,7 @@ nav{
   /* Shrink back button */
   .nav-back{padding:6px 12px;font-size:0.65rem;letter-spacing:0.06em}
   .nav-back span{display:none}
+  .nav-promo-btn{display:none}
   /* Ensure lang buttons stay visible and don't overflow */
   .lang-switcher{gap:0.2rem}
   .lang-btn{padding:3px 6px;font-size:0.62rem;letter-spacing:0.05em}
@@ -679,7 +698,7 @@ footer{background:var(--text);color:rgba(255,255,255,0.6);padding:60px 5vw 40px;
 
 <!-- ─── NAV ───────────────────────────────────────────── -->
 <nav id="main-nav">
-  <a ="index.html" class="nav-brand">
+  <a href="index.html" class="nav-brand">
     <div class="nav-logo-img"><img src="https://ik.imagekit.io/erewhile/Solvata/logo%20solvata%20beauty.png?updatedAt=1777383555772" alt="Solvata Beauty"></div>
     <span class="nav-logo">Solvata <span>Beauty</span></span>
   </a>
@@ -688,6 +707,7 @@ footer{background:var(--text);color:rgba(255,255,255,0.6);padding:60px 5vw 40px;
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M9 11L5 7l4-4"/></svg>
       <span data-i18n="nav_back">Atpakaļ</span>
     </a>
+    <a href="rf-microneedling.html" class="nav-back nav-promo-btn" data-i18n="nav_promo">Mēneša procedūra</a>
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('lv')">LV</button>
       <button class="lang-btn" onclick="setLang('ru')">RU</button>
@@ -1358,7 +1378,7 @@ function submitForm(){
 // TRANSLATIONS
 const tr={
   lv:{
-    nav_back:'Atpakaļ',breadcrumb:'Pakalpojumi',hero_eyebrow:'Premium aparatūras kosmetoloģija',
+    nav_back:'Atpakaļ', nav_promo:'Mēneša procedūra', breadcrumb:'Pakalpojumi',hero_eyebrow:'Premium aparatūras kosmetoloģija',
     hero_title:'Mūsu <em>procedūras</em> —<br>detalizēts apraksts',
     hero_sub:'Katru procedūru esam izvēlējuši ar augstu atbildību — klīniski pierādīta efektivitāte, oriģināls aprīkojums un individuāla pieeja katrai klientei.',
     snav_laser:'Diodes lāzers',snav_injections:'Injekcijas',contra_label:'Kontrindikācijas',contra_btn:'Kontrindikācijas',price_btn:'Cenas',effects_title:'Procedūras efekti',aftercare_title:'Pēcprocedūras kopšana',
@@ -1427,7 +1447,7 @@ const tr={
     footer_desc:'Aparatūras kosmetoloģija Rīgā ar premium iekārtām un individuālu pieeju katrai klientei.',footer_services:'Pakalpojumi',footer_laser:'Diodes lāzers Lamis XL',footer_contact:'Kontakti',footer_rights:'Visas tiesības aizsargātas.',footer_privacy:'Privātuma politika'
   },
   ru:{
-    nav_back:'Назад',breadcrumb:'Процедуры',hero_eyebrow:'Аппаратная косметология премиум-класса',hero_title:'Наши <em>процедуры</em> —<br>подробное описание',hero_sub:'Каждую процедуру выбираем с высокой ответственностью — клинически доказанная эффективность, оригинальное оборудование и индивидуальный подход к каждой клиентке.',
+    nav_back:'Назад', nav_promo:'Процедура месяца', breadcrumb:'Процедуры',hero_eyebrow:'Аппаратная косметология премиум-класса',hero_title:'Наши <em>процедуры</em> —<br>подробное описание',hero_sub:'Каждую процедуру выбираем с высокой ответственностью — клинически доказанная эффективность, оригинальное оборудование и индивидуальный подход к каждой клиентке.',
     snav_laser:'Диодный лазер',snav_injections:'Инъекции',contra_label:'Противопоказания',contra_btn:'Противопоказания',price_btn:'Цены',effects_title:'Эффекты процедуры',aftercare_title:'Уход после процедуры',
     z_label:'Процедура для тела',z_quote:'Процедура ощущается как тёплый, глубокий массаж. Кожа становится подтянутой и более гладкой уже после первых сеансов — без боли и реабилитации.',z_desc1:'Zionic — первый аппарат в мире, сочетающий глубокий активный ротационный массаж (MARP) и 470 кГц монополярную радиочастоту в одной насадке. Комбинация воздействует на дермальный, сосудистый и мышечный уровни одновременно.',z_desc2:'MARP стимулирует кожу и мышцы на глубоком уровне, а RF ускоряет метаболизм жировых клеток и укрепляет соединительную ткань.',z_sv1:'1-й сеанс',z_sk1:'Первый эффект',z_sk2:'Сеансов в курсе',z_sv3:'Нет',z_sk3:'Реабилитация',z_e1:'Уменьшение целлюлита',z_e2:'Укрепление кожи',z_e3:'Коррекция контуров',z_e4:'Лимфодренаж',z_e5:'Микроциркуляция',z_e6:'Уменьшение отёков',
     mn_label:'Процедура для лица и тела',mn_quote:'Процедура не просто укрепляет кожу — она её обновляет изнутри. RF-энергия доставляется точечно вглубь, куда обычный микронидлинг не достигает.',mn_desc1:'Endymed Intensif — первая FDA-cleared моторизованная RF-микронидлинговая технология в мире. Микроиглы точечно доставляют 3DEEP RF-энергию в дерму — запуская активный биосинтез нового коллагена и эластина.',mn_desc2:'Эффект нарастает 2–3 месяца после процедуры. Клинически доказана эффективность при постакне, растяжках и пигментации — с результатом до 2 лет.',mn_sk1:'Дней реабилитации',mn_sk2:'Процедуры в курсе',mn_sk3:'Эффект сохраняется',mn_e1:'Лифтинг и подтяжка',mn_e2:'Рубцы и растяжки',mn_e3:'Постакне',mn_e4:'Пигментация',mn_e5:'Плотность кожи',mn_a1:'Первые 24ч кожа может быть чувствительной, возможен отёк и жжение',mn_a2:'2–3 дня — покраснение; в течение недели — следы от иголок',mn_a3:'Octenisept + Bepanthen крем — 5–7 дней, тонким слоем каждые 2–3 часа',mn_a4:'Умываться мягким средством без кислот и ретинолов; не тереть',mn_a5:'1 месяц — SPF 30–50 обязательно',mn_a6:'Сауна, бассейн, тренировки — через неделю',
@@ -1462,7 +1482,7 @@ const tr={
     inj_price_from_label:'Цены от <span>50€</span>',inj_price_inline:'Стоимость уточняется на консультации в зависимости от препарата и зоны обработки. Каждый препарат подбирается индивидуально под запрос клиента.',
   },
   en:{
-    nav_back:'Back',breadcrumb:'Treatments',hero_eyebrow:'Medical-grade aesthetic treatments',hero_title:'Our <em>treatments</em> —<br>detailed overview',hero_sub:'Every procedure is chosen with the highest responsibility — clinically proven effectiveness, original equipment and an individual approach to each client.',
+    nav_back:'Back', nav_promo:'Treatment of the Month', breadcrumb:'Treatments',hero_eyebrow:'Medical-grade aesthetic treatments',hero_title:'Our <em>treatments</em> —<br>detailed overview',hero_sub:'Every procedure is chosen with the highest responsibility — clinically proven effectiveness, original equipment and an individual approach to each client.',
     snav_laser:'Diode Laser',snav_injections:'Injections',contra_label:'Contraindications',contra_btn:'Contraindications',price_btn:'Prices',effects_title:'Treatment effects',aftercare_title:'Post-procedure care',
     z_label:'Body treatment',z_quote:'The procedure feels like a warm, deep massage. Skin becomes firmer and smoother after the very first sessions — with no pain and no downtime.',z_desc1:'Zionic — the world\'s first device combining deep active rotational massage (MARP) with 470 kHz monopolar radiofrequency in a single handpiece. This combination acts simultaneously at the dermal, vascular and muscular level.',z_desc2:'MARP mechanically stimulates skin and muscles at depth while RF simultaneously accelerates fat cell metabolism and strengthens connective tissue.',z_sv1:'1st session',z_sk1:'First visible effect',z_sk2:'Sessions in course',z_sv3:'None',z_sk3:'Recovery',z_e1:'Cellulite reduction',z_e2:'Skin firming',z_e3:'Body contouring',z_e4:'Lymphatic drainage',z_e5:'Microcirculation',z_e6:'Edema reduction',
     mn_label:'Face & body treatment',mn_quote:'The procedure doesn\'t just firm skin — it renews it from within. RF energy is delivered precisely to the depth where standard microneedling cannot reach.',mn_desc1:'Endymed Intensif is the world\'s first FDA-cleared motorized RF microneedling technology. Micro-needles precisely deliver 3DEEP RF energy into the dermis — activating new collagen and elastin biosynthesis.',mn_desc2:'The effect continues to build for 2–3 months post-procedure. Clinically proven efficacy on post-acne scars, stretch marks and pigmentation — with results lasting up to 2 years.',mn_sk1:'Days recovery',mn_sk2:'Sessions in course',mn_sk3:'Effect duration',mn_e1:'Lifting & tightening',mn_e2:'Scars & stretch marks',mn_e3:'Post-acne',mn_e4:'Pigmentation',mn_e5:'Skin density',mn_a1:'First 24h: skin may be sensitive, swelling and warmth possible',mn_a2:'2–3 days: possible redness; within a week — small needle marks',mn_a3:'Octenisept + Bepanthen cream — 5–7 days, thin layer every 2–3 hours',mn_a4:'Cleanse with gentle, acid-free product; do not rub',mn_a5:'1 month — SPF 30–50 mandatory',mn_a6:'Sauna, pool, gym — after one week',
